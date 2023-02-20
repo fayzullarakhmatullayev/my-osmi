@@ -21,6 +21,8 @@ module.exports = {
     company: "./src/js/company.js",
     contacts: "./src/js/contacts.js",
     vacancies: "./src/js/vacancies.js",
+    career: "./src/js/career.js",
+    footer: "./src/js/footer.js",
   },
 
   output: {

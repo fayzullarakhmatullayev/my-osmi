@@ -2,6 +2,7 @@ export default function resizeScreen(resizeData) {
   if (!resizeData.length) return;
   function resize(element, className, size, isLess) {
     const el = document.querySelector(element);
+    if(!el) return
     if (isLess) {
       window.innerWidth <= size
         ? el.classList.add(className)

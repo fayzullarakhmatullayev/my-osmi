@@ -12,6 +12,12 @@ export const resizeData = [
     isLess: true, //<=
   },
   {
+    element: ".header-logo",
+    className: "mobile",
+    size: 1023,
+    isLess: true, //<=
+  },
+  {
     element: ".header-menu",
     className: "header-menu_show",
     size: 1023,

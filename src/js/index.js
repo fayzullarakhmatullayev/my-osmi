@@ -103,6 +103,128 @@ const industry = class IndustrySpecialization {
     this.specializtionClick();
     this.addDynamicStyle();
     this.dynamicStyle();
+    resizeScreen([
+      {
+        element: '.industry-specialization',
+        className: 'mobile',
+        size: 1023,
+        isLess: true // <=
+      },
+      {
+        element: '.industry-specialization__content',
+        className: 'mobile',
+        size: 1023,
+        isLess: true // <=
+      },
+      {
+        element: '.industry-specialization__title',
+        className: 'mobile',
+        size: 1023,
+        isLess: true // <=
+      },
+      {
+        element: '.industry-specialization-tab__wrapper-navigation',
+        className: 'mobile',
+        size: 1023,
+        isLess: true // <=
+      },
+    ])
+    const colums = document.querySelectorAll('.industry-specialization__column');
+    const items = document.querySelectorAll('.industry-specialization-tab__navigation-item');
+    const linkItems = document.querySelectorAll('.industry-specialization-tab-link-item');
+    const navigations = document.querySelectorAll('.industry-specialization-tab__navigation');
+    const content = document.querySelectorAll('.industry-specialization-tab-picture-item__content');
+    const webs = document.querySelectorAll('.web');
+    const gridRows = document.querySelectorAll('.industry-specialization-tab__grid-row');
+    colums.forEach((colum) => {
+      resizeScreen([
+        {
+          element: '.industry-specialization__column',
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+      ])
+    })
+    navigations.forEach(() => {
+      resizeScreen([
+        {
+          element: '.industry-specialization-tab__navigation',
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+      ])
+    })
+    gridRows.forEach((item, idx) => {
+      const el = item.id = `gridRow_${idx}`
+      resizeScreen([
+        {
+          element: `#gridRow_${idx}`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+      ])
+    })
+    items.forEach((item, idx) => {
+      const el = item.id = `item_${idx}`
+      resizeScreen([
+        {
+          element: `#item_${idx}`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+      ])
+    })
+    linkItems.forEach((item, idx) => {
+      const el = item.id = `linkItems_${idx}`
+      resizeScreen([
+        {
+          element: `#linkItems_${idx}`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+        {
+          element: '.industry-specialization-tab-link-item__img',
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+        {
+          element: '.industry-specialization-tab-link-item__title',
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+      ])
+    })
+    content.forEach((item, idx) => {
+      const el = item.id = `content_${idx}`
+      resizeScreen([
+        {
+          element: `#content_${idx}`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+        {
+          element: `#content_${idx} .industry-specialization-tab-picture-item__wrapper-text`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+        {
+          element: `#content_${idx} .industry-specialization-tab-picture-item__text`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true // <=
+        },
+      ])
+    })
+    
     window.addEventListener("resize", () => {
       this.addDynamicStyle();
       this.dynamicStyle();
@@ -378,6 +500,27 @@ const mainAbout = class MainAbout {
     }
   }
   init() {
+    resizeScreen([
+      {element: '.main-about', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__circle', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__top', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__title', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__description', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__bottom', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__statistics-list', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about__statistics-block', className: 'isMobile', size: 1023, isLess: true },
+      {element: '.main-about-statistics-item', className: 'isMobile', size: 1023, isLess: true },
+    ])
+    
+    const items = document.querySelectorAll('.main-about-statistics-item');
+    items.forEach((item, idx) => {
+      const el = item.id  = `main_about_item_${idx}`
+      resizeScreen([
+        {element: `#main_about_item_${idx}`, className: 'isMobile', size: 1023, isLess: true },
+        {element: `#main_about_item_${idx} .main-about-statistics-item__title`, className: 'isMobile', size: 1023, isLess: true },
+        {element: `#main_about_item_${idx} .main-about-statistics-item__description`, className: 'isMobile', size: 1023, isLess: true },
+      ])
+    })
     this.animateCircle();
   }
 };
@@ -409,6 +552,102 @@ const mainQuestionForm = class mainQuestionForm {
       },
       {
         element: ".main-resume",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__content",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__tentacles",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__top-box",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__bottom-box",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__web",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__box",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__description",
+        className: "isMobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".first-screen__btn",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases__top-decoration",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases__content",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases__title",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases__tabs-tags",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases__list",
+        className: "mobile",
+        size: 1023,
+        isLess: true, //<=
+      },
+      {
+        element: ".main-cases__more",
         className: "mobile",
         size: 1023,
         isLess: true, //<=

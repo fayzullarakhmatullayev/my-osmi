@@ -9,7 +9,7 @@
     padding-bottom: 64px;
   }
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     padding-top: 30px;
     padding-bottom: 0;
     background-color: $white;
@@ -22,26 +22,26 @@
 // }
 
 .main-about__circle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  transform: translateX(50%) translateY(50%);
-  background: #fff;
-  border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    transform: translateX(50%) translateY(50%);
+    background: #fff;
+    border-radius: 50%;
 
-  @media (max-width: 1023px) {
-    display: none;
+    &.isMobile {
+      display: none;
+    }
   }
-}
 
 .main-about__top {
   position: relative;
   display: grid;
   grid-template-columns: max-content auto;
   grid-gap: 0 vw(155);
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   align-items: center;
   padding-left: vw(50);
   padding-right: vw(50);
@@ -54,7 +54,7 @@
     grid-gap: 0 23px;
   }
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     padding-left: 16px;
     padding-right: 16px;
     margin-bottom: 24px;
@@ -75,7 +75,7 @@
     color: $blueMain;
   }
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     font-size: 32px;
     line-height: 40px;
     color: $blueMain;
@@ -103,7 +103,7 @@
     color: $blueMain;
   }
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     font-size: 14px;
     line-height: 24px;
     color: $blueMain;
@@ -127,7 +127,7 @@
   padding-right: vw(90);
   z-index: 1;
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     grid-template-columns: 1fr;
     padding-left: 16px;
     padding-right: 16px;
@@ -146,12 +146,12 @@
   &:last-child {
     grid-column: 3;
 
-    @media (max-width: 1023px) {
+    &.isMobile {
       grid-column: 1;
     }
   }
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -182,7 +182,7 @@
     opacity: 1;
   }
 
-  @media (max-width: 1023px) {
+  &.isMobile {
     padding-left: 15px;
     padding-right: 15px;
     opacity: 1;
@@ -202,7 +202,8 @@
   color: $wildWatermelon;
   margin-bottom: vw(12);
 
-  @media (max-width: 1023px) {
+  &.isTable,
+  &.isMobile {
     font-size: 40px;
     line-height: 56px;
     margin-bottom: 4px;
@@ -215,7 +216,8 @@
   line-height: vw(24);
   color: $blueMain;
 
-  @media (max-width: 1023px) {
+  &.isTable,
+  &.isMobile {
     font-size: 14px;
     line-height: 24px;
   }
@@ -232,11 +234,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      180deg,
-      rgba(18, 20, 35, 0) 66.88%,
-      #121423 81.78%
-    );
+    background: linear-gradient(180deg, rgba(18, 20, 35, 0) 66.88%, #121423 81.78%);
   }
 }
 

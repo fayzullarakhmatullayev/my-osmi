@@ -1,29 +1,27 @@
-<div id="first-screen" class="first-screen trigger-wrapper-top">
+<div id="first-screen" class="first-screen trigger-wrapper-top" :class="{'mobile': window.width <=1023}">
   <div class="cursor">
-    <img class="cursor-shape" src="img/shape.png" alt="" />
-    <canvas id="cursor"></canvas>
+      <img class="cursor-shape" src="img/shape.png" alt="">
+      <canvas id="cursor"></canvas>
   </div>
 
-  <div class="first-screen__content">
-    <div class="first-screen__content-box">
-      <img class="first-screen__tentacles" src="img/svg/tentacles.svg" alt="" />
-      <div class="first-screen__top-box">
-        <img class="first-screen__integr" src="img/svg/integr.svg" alt="" />
-        <img class="first-screen__ator" src="img/svg/ator.svg" alt="" />
+  <div class="first-screen__content" :class="{'isMobile': window.width <=1023}">
+      <div class="first-screen__content-box">
+          <img class="first-screen__tentacles" :class="{'isMobile': window.width <=1023}" src="img/svg/tentacles.svg" alt="">
+          <div class="first-screen__top-box" :class="{'isMobile': window.width <=1023}">
+              <img class="first-screen__integr" src="img/svg/integr.svg" alt="">
+              <img class="first-screen__ator" src="img/svg/ator.svg" alt="">
+          </div>
+          <div class="first-screen__bottom-box" :class="{'isMobile': window.width <=1023}">
+              <img class="first-screen__web" :class="{'isMobile': window.width <=1023}" src="img/svg/web.svg" alt="" >
+              <div class="first-screen__box" :class="{'isMobile': window.width <=1023}">
+                  <span class="first-screen__description" :class="{'isMobile': window.width <=1023}">Для среднего и крупного бизнеса</span>
+                  <span class="btn btn--pink first-screen__btn" :class="{'mobile': window.width <=1023}">
+                      <span class="btn__content">
+                          <span class="btn__text">Смотреть презентацию</span>
+                      </span>
+                  </span>
+              </div>
+          </div>
       </div>
-      <div class="first-screen__bottom-box">
-        <img class="first-screen__web" src="img/svg/web.svg" alt="" />
-        <div class="first-screen__box">
-          <span class="first-screen__description"
-            >Для среднего и крупного бизнеса</span
-          >
-          <span class="btn btn--pink first-screen__btn">
-            <span class="btn__content">
-              <span class="btn__text">Смотреть презентацию</span>
-            </span>
-          </span>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

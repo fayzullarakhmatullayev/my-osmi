@@ -1,0 +1,88 @@
+.career {
+    background: none;
+    &-first {
+        background: #121423;
+    }
+    .footer:not(.mobile) .footer-tentacle {
+        top: vw(-800);
+    }
+}
+.career-qualities {
+    overflow: hidden;
+    &:not(.mobile) {
+        padding: vw(50);
+        // background: url("data:image/svg+xml,%3Csvg width='1920' height='1268' viewBox='0 0 1920 1268' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-5 0H1925.5V781H1405H1085.49C669.305 781 272.779 958.084 -5 1268V781L-5 0Z' fill='%230E0F1A'/%3E%3C/svg%3E%0A") 0 0 / 100% no-repeat;
+        background: $bgColor;
+        padding-bottom: vw(600);
+    }
+    &.mobile {
+        padding: 0 20px 74px;
+        background: $bgColor;
+    }
+    &-title {
+        text-transform: uppercase;
+        @extend %white;
+    }
+    &:not(.mobile) &-title  {
+        white-space: nowrap;
+        margin-bottom: vw(118);
+    }
+    &.mobile &-title  {
+        margin-bottom: 50px;
+        font-size: 45px;
+        line-height: 55px;
+    }
+    &:not(.mobile) &-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-item {
+        text-align: center;
+        .icon {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            font-weight: 300;
+            @extend %white;
+        }
+    }
+    &:not(.mobile) &-item {
+        width: vw(250);
+        &:not(:nth-child(5n+5)) {
+            margin-right: vw(120);
+        }
+        &:nth-child(n+6) {
+            margin-top: vw(120);
+        }
+        .icon {
+            width: vw(170);
+            height: vw(140);
+            margin-bottom: vw(30);
+        }
+        .text {
+            font-size: vw(30);
+            line-height: vw(40);
+        }
+    }
+    &.mobile &-item {
+        width: 100%;
+        &:not(:last-child) {
+           margin-bottom: 50px;
+        }
+        .icon {
+            width: 103px;
+            height: 86px;
+            margin: 0 auto 30px;
+        }
+        .text {
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+}

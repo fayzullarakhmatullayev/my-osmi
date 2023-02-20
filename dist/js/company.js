@@ -874,6 +874,7 @@ function resizeScreen(resizeData) {
   if (!resizeData.length) return;
   function resize(element, className, size, isLess) {
     var el = document.querySelector(element);
+    if (!el) return;
     if (isLess) {
       window.innerWidth <= size ? el.classList.add(className) : el.classList.remove(className);
     } else {
