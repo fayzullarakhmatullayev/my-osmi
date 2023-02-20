@@ -1,0 +1,115 @@
+.englex {
+    background: #CE4A37;
+}
+.englex__letter {
+    width: vw(250);
+    height: vw(311);
+    background: url('../img/svg/bicons.svg') 50% 50%/cover no-repeat;
+    position: absolute;
+    top: calc(50% - #{vw(60)});
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.englex__letter:before {
+    content: "A";
+    font-family: 'Rubik', sans-serif;
+    display: block;
+    font-weight: bold;
+    font-size: vw(180);
+    line-height: 160%;
+    text-align: center;
+    color: #FFD6B8;
+    -webkit-text-stroke-width: vw(7);
+    -webkit-text-stroke-color: #393736;
+    
+}
+.englex:hover .englex__letter:before {
+    animation: letters 33s infinite ease;
+}
+.englex.mobile .englex__letter:before {
+    content: "A" !important;
+}
+
+@keyframes letters {
+    0% {
+        content: "A";
+    }
+    3% {
+        content: "B";
+    }
+    6% {
+        content: "C";
+    }
+    9% {
+        content: "D";
+    }
+    12% {
+        content: "E";
+    }
+    15% {
+        content: "F";
+    }
+    18% {
+        content: "G";
+    }
+    21% {
+        content: "H";
+    }
+    24% {
+        content: "I";
+    }
+    27% {
+        content: "J";
+    }
+    30% {
+        content: "K";
+    }
+    33% {
+        content: "L";
+    }
+    36% {
+        content: "M";
+    }
+    39% {
+        content: "N";
+    }
+    41% {
+        content: "O";
+    }
+    44% {
+        content: "P";
+    }
+    47% {
+        content: "Q";
+    }
+    50% {
+        content: "R";
+    }
+    53% {
+        content: "S";
+    }
+    56% {
+        content: "T";
+    }
+    59% {
+        content: "U";
+    }
+    62% {
+        content: "V";
+    }
+    65% {
+        content: "W";
+    }
+    68% {
+        content: "X";
+    }
+    71% {
+        content: "Y";
+    }
+    74% {
+        content: "Z";
+    }
+    100% {
+        content: "Z";
+    }
+}

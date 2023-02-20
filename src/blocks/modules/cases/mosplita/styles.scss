@@ -1,0 +1,118 @@
+@use "sass:math";
+.mosplita {
+    background: #C83947;
+}
+.mosplita__images {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.mosplita__image {
+    // transition: opacity .6s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/mosplita.png') 50% 50%/cover no-repeat;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    opacity: 0;
+}
+@for $i from 1 through 26 {
+    .mosplita__image:nth-child(#{$i}) { 
+      transition: .3s opacity #{math.div($i, 20)}s ease;
+    }
+}
+.mosplita__image:nth-child(1) {
+    clip-path: polygon(#{vw(-33)} #{vw(261)}, #{vw(-33)} #{vw(465)}, #{vw(172)} #{vw(465)}, #{vw(172)} #{vw(261)});
+}
+.mosplita__image:nth-child(2) {
+    clip-path: polygon(#{vw(172)} #{vw(261)}, #{vw(172)} #{vw(465)}, #{vw(377)} #{vw(465)}, #{vw(377)} #{vw(261)});
+}
+.mosplita__image:nth-child(3) {
+    clip-path: polygon(#{vw(582)} #{vw(261)}, #{vw(582)} #{vw(465)}, #{vw(787)} #{vw(465)}, #{vw(787)} #{vw(261)});
+}
+.mosplita__image:nth-child(4) {
+    clip-path: polygon(#{vw(787)} #{vw(465)}, #{vw(787)} #{vw(261)}, #{vw(992)} #{vw(261)}, #{vw(992)} #{vw(465)});
+}
+.mosplita__image:nth-child(5) {
+    clip-path: polygon(#{vw(377)} #{vw(55)}, #{vw(377)} #{vw(261)}, #{vw(582)} #{vw(261)}, #{vw(582)} #{vw(55)});
+}
+.mosplita__image:nth-child(6) {
+    clip-path: polygon(#{vw(582)} #{vw(465)}, #{vw(582)} #{vw(670)}, #{vw(787)} #{vw(670)}, #{vw(787)} #{vw(465)});
+}
+.mosplita__image:nth-child(7) {
+    clip-path: polygon(#{vw(787)} #{vw(465)}, #{vw(787)} #{vw(670)}, #{vw(992)} #{vw(670)}, #{vw(992)} #{vw(465)});
+}
+.mosplita__image:nth-child(8) {
+    opacity: 1 !important;
+    clip-path: polygon(#{vw(377)} #{vw(261)}, #{vw(377)} #{vw(465)}, #{vw(582)} #{vw(465)}, #{vw(582)} #{vw(261)});
+}
+.mosplita__image:nth-child(9) {
+    clip-path: polygon(#{vw(-83)} #{vw(615)}, #{vw(-83)} #{vw(820)}, #{vw(122)} #{vw(820)}, #{vw(122)} #{vw(615)});
+}
+.mosplita__image:nth-child(10) {
+    clip-path: polygon(#{vw(377)} #{vw(465)}, #{vw(377)} #{vw(670)}, #{vw(582)} #{vw(670)}, #{vw(582)} #{vw(465)});
+}
+.mosplita__image:nth-child(11) {
+    clip-path: polygon(#{vw(-83)} #{vw(465)}, #{vw(-83)} #{vw(670)}, #{vw(122)} #{vw(670)}, #{vw(122)} #{vw(465)});
+}
+.mosplita__image:nth-child(12) {
+    clip-path: polygon(#{vw(582)} #{vw(55)}, #{vw(582)} #{vw(261)}, #{vw(787)} #{vw(261)}, #{vw(787)} #{vw(55)});
+}
+.mosplita__image:nth-child(13) {
+    clip-path: polygon(#{vw(787)} #{vw(55)}, #{vw(787)} #{vw(261)}, #{vw(992)} #{vw(261)}, #{vw(992)} #{vw(55)});
+}
+.mosplita__image:nth-child(14) {
+    clip-path: polygon(#{vw(122)} #{vw(55)}, #{vw(122)} #{vw(261)}, #{vw(377)} #{vw(261)}, #{vw(377)} #{vw(55)});
+}
+.mosplita__image:nth-child(15) {
+    clip-path: polygon(#{vw(122)} #{vw(465)}, #{vw(122)} #{vw(670)}, #{vw(377)} #{vw(670)}, #{vw(377)} #{vw(465)});
+}
+.mosplita__image:nth-child(16) {
+    clip-path: polygon(#{vw(582)} #{vw(-150)}, #{vw(582)} #{vw(55)}, #{vw(787)} #{vw(55)}, #{vw(787)} #{vw(-150)});
+}
+.mosplita__image:nth-child(17) {
+    clip-path: polygon(#{vw(-83)} #{vw(465)}, #{vw(-83)} #{vw(670)}, #{vw(122)} #{vw(670)}, #{vw(122)} #{vw(465)});
+}
+.mosplita__image:nth-child(18) {
+    clip-path: polygon(#{vw(787)} #{vw(-150)}, #{vw(787)} #{vw(55)}, #{vw(992)} #{vw(55)}, #{vw(992)} #{vw(-150)});
+}
+.mosplita__image:nth-child(19) {
+    clip-path: polygon(#{vw(377)} #{vw(-150)}, #{vw(377)} #{vw(55)}, #{vw(582)} #{vw(55)}, #{vw(582)} #{vw(-150)});
+}
+.mosplita__image:nth-child(20) {
+    clip-path: polygon(#{vw(582)} #{vw(615)}, #{vw(582)} #{vw(820)}, #{vw(787)} #{vw(820)}, #{vw(787)} #{vw(615)});
+}
+.mosplita__image:nth-child(21) {
+    clip-path: polygon(#{vw(787)} #{vw(615)}, #{vw(787)} #{vw(820)}, #{vw(992)} #{vw(820)}, #{vw(992)} #{vw(615)});
+}
+.mosplita__image:nth-child(22) {
+    clip-path: polygon(#{vw(-83)} #{vw(-150)}, #{vw(-83)} #{vw(55)}, #{vw(122)} #{vw(55)}, #{vw(122)} #{vw(-150)});
+}
+.mosplita__image:nth-child(23) {
+    clip-path: polygon(#{vw(122)} #{vw(615)}, #{vw(122)} #{vw(820)}, #{vw(377)} #{vw(820)}, #{vw(377)} #{vw(615)});
+}
+.mosplita__image:nth-child(24) {
+    clip-path: polygon(#{vw(-83)} #{vw(55)}, #{vw(-83)} #{vw(261)}, #{vw(122)} #{vw(261)}, #{vw(122)} #{vw(55)});
+}
+.mosplita__image:nth-child(25) {
+    clip-path: polygon(#{vw(377)} #{vw(615)}, #{vw(377)} #{vw(820)}, #{vw(582)} #{vw(820)}, #{vw(582)} #{vw(615)});
+}
+.mosplita__image:nth-child(26) {
+    clip-path: polygon(#{vw(122)} #{vw(-150)}, #{vw(122)} #{vw(55)}, #{vw(377)} #{vw(55)}, #{vw(377)} #{vw(-150)});
+}
+.mosplita:hover .mosplita__image {
+    @for $i from 1 through 26 {
+        &:nth-child(#{$i}) { 
+          transition: .3s opacity #{math.div($i, 8)}s ease;
+          opacity: 1;
+        }
+    }
+}
+.mosplita.mobile .mosplita__image {
+    opacity: 1 !important;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+}

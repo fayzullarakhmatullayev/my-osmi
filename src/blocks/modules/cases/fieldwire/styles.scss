@@ -1,0 +1,31 @@
+.fieldwire {
+    background: #6496FF;
+    transition: background .6s ease;
+}
+.fieldwire__image {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - #{vw(15)});
+    transform: translateX(-50%) translateY(-50%);
+    width: vw(325);
+    height: vw(425);
+}
+.fieldwire__image--hat {
+    position: absolute;
+    top: -100%;
+    transition: top .6s ease;
+    left: calc(50% - #{vw(55)});
+    transform: translateX(-50%);
+    width: vw(403);
+    height: vw(179);
+}
+.fieldwire:hover,
+.fieldwire.mobile {
+    background: #3D3D3D;
+}
+.fieldwire:hover .fieldwire__image--hat {
+    top: vw(115);
+}
+.fieldwire.mobile .fieldwire__image--hat {
+    top: vw(300);
+}

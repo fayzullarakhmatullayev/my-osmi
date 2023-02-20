@@ -1,0 +1,53 @@
+.frost {
+    background: url('../img/frost_bg.jpg') 50% 50% / cover no-repeat;
+    .mob_cond {
+        display: none;
+    }
+    &.mobile {
+        svg {
+            display: none;
+        }
+        .mob_cond {
+            display: block;
+            max-width: 100%;
+        }
+    }
+}
+.frost__overlay {
+    background: linear-gradient(0deg, #EEF6F9, #EEF6F9), #DD2F44;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity .6s ease;
+}
+.frost__image {
+    width: vw(561);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - #{vw(70)});
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transition: all .6s ease;
+}
+.frost:not(.mobile):hover .frost__image .propeller {
+    animation: propeller .29s infinite linear;
+}
+.frost:hover .frost__overlay,
+.frost.mobile .frost__overlay {
+    opacity: 0;
+}
+.frost.mobile .frost__image {
+    width: 142px;
+    min-width: 142px;
+}
+
+@keyframes propeller {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

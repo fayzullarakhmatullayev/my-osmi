@@ -1,0 +1,328 @@
+<section class="job-stages" :class="{'mobile': window.width <=1023}" >
+    <h2 class="job-stages-title">
+        Этапы разработки
+    </h2>
+    <div class="job-stages-triggers">
+        <a href="#" data-tab-id="0" class="job-stages-trigger isActive" @mouseenter="buttonMouseEnter" @mouseleave="buttonMouseLeave">
+            <div class="in">
+                <div class="number">1</div>
+                <div class="text">Аналитика</div>
+            </div>
+        </a>
+        <a href="#" data-tab-id="1" class="job-stages-trigger" @mouseenter="buttonMouseEnter" @mouseleave="buttonMouseLeave">
+            <div class="in">
+                <div class="number">2</div>
+                <div class="text">Проектирование</div>
+            </div>
+        </a>
+        <a href="#" data-tab-id="2" class="job-stages-trigger" @mouseenter="buttonMouseEnter" @mouseleave="buttonMouseLeave">
+            <div class="in">
+                <div class="number">3</div>
+                <div class="text">Дизайн</div>
+            </div>
+        </a>
+        <a href="#" data-tab-id="3" class="job-stages-trigger" @mouseenter="buttonMouseEnter" @mouseleave="buttonMouseLeave">
+            <div class="in">
+                <div class="number">4</div>
+                <div class="text">Разработка</div>
+            </div>
+        </a>
+        <a href="#job-analitics" class="job-stages-trigger" @mouseenter="buttonMouseEnter" @mouseleave="buttonMouseLeave">
+            <div class="in">
+                <div class="number">5</div>
+                <div class="text">Поддержка</div>
+            </div>
+        </a>
+        <a href="#job-management" class="job-stages-trigger" @mouseenter="buttonMouseEnter" @mouseleave="buttonMouseLeave">
+            <div class="in">
+                <div class="number">6</div>
+                <div class="text">Менеджмент</div>
+            </div>
+        </a>
+
+        <button class="job-stages-arrow job-stages-arrow--prev" data-glide-dir="<">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+        </button>
+        <button class="job-stages-arrow job-stages-arrow job-stages--next" data-glide-dir=">">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+        </button>
+    </div>
+    <div class="job-stages-tabs jobtab">
+        <div class="job-stages-slides job-stages-slides-double job-stages-slides--0">
+            <div class="job-stages-trig"></div>
+            <div class="job-stages-slide">
+                <div class="glide__arrows job-stages-arrows" data-glide-el="controls">
+                    <button class="job-stages-arrow job-stages-arrow--prev" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                    <button class="job-stages-arrow job-stages-arrow job-stages--next" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                </div> 
+                <div class="glide__track job-stages-track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        @@for (var i = 0; i < 3; i++) {
+                            <li class="glide__slide job-stages-item">
+                                <div class="job-stages-item-text">
+                                    В нем они описывают функциональную логику работы всех разделов и блоков будущего проекта, а также нефункциональные требования к нему. На основании этого тимлид разрабатывает программную архитектуру, структуру хранения данных и спецификации на интеграции. На этой же стадии наши специалисты по информационной безопасности фиксируют требования по безопасности к системам. Задание обсуждаем с клиентом и утверждаем его.
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="job-stages-slides job-stages-slides-double job-stages-slides--1">
+            <div class="job-stages-trig"></div>
+            <div class="job-stages-slide">
+                <div class="glide__arrows job-stages-arrows" data-glide-el="controls">
+                    <button class="job-stages-arrow job-stages-arrow--prev" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                    <button class="job-stages-arrow job-stages-arrow job-stages--next" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                </div> 
+                <div class="glide__track job-stages-track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        @@for (var i = 0; i < 3; i++) {
+                            <li class="glide__slide job-stages-item">
+                                <div class="job-stages-item-text">
+                                    В нем они описывают функциональную логику работы всех разделов и блоков будущего проекта, а также нефункциональные требования к нему. На основании этого тимлид разрабатывает программную архитектуру, структуру хранения данных и спецификации на интеграции. На этой же стадии наши специалисты по информационной безопасности фиксируют требования по безопасности к системам. Задание обсуждаем с клиентом и утверждаем его.
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="job-stages-slides job-stages-slides--2">
+            <div class="job-stages-trig"></div>
+            <div class="job-stages-slide">
+                <div class="job-stages-title-triggers" data-glide-el="controls[nav]">
+                    <div class="job-stages-title-trigger isActive" data-glide-dir="=0">UI</div>
+                    <div class="job-stages-title-trigger" data-glide-dir="=1">Ux</div>
+                    <div class="job-stages-title-trigger" data-glide-dir="=2">Motion</div>
+                    <div class="job-stages-title-trigger" data-glide-dir="=3">3D</div>
+                    <div class="job-stages-title-trigger" data-glide-dir="=4">Иллюстрации</div>
+                    <div class="job-stages-title-trigger" data-glide-dir="=5">Фото и видео контент</div>
+                </div>
+                <div class="glide__arrows job-stages-arrows" data-glide-el="controls">
+                    <button class="job-stages-arrow job-stages-arrow--prev" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                    <button class="job-stages-arrow job-stages-arrow job-stages--next" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                </div> 
+                <div class="glide__track job-stages-track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide job-stages-item" data-item-type="ui">
+                            <div class="job-stages-item-left">
+                                <div class="job-stages-item-text">
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                </div>
+                            </div>
+                            <div class="job-stages-item-right" v-if="window.width > 1023">
+                                <div class="job-stages-item-image">
+                                    <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide job-stages-item" data-item-type="ui">
+                            <div class="job-stages-item-left">
+                                <div class="job-stages-item-text">
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                </div>
+                            </div>
+                            <div class="job-stages-item-right" v-if="window.width > 1023">
+                                <div class="job-stages-item-image">
+                                    <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide job-stages-item" data-item-type="ux">
+                            <div class="job-stages-item-left">
+                                <div class="job-stages-item-text">
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                </div>
+                            </div>
+                            <div class="job-stages-item-right" v-if="window.width > 1023">
+                                <div class="job-stages-item-image">
+                                    <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide job-stages-item" data-item-type="ui">
+                            <div class="job-stages-item-left">
+                                <div class="job-stages-item-text">
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                </div>
+                            </div>
+                            <div class="job-stages-item-right" v-if="window.width > 1023">
+                                <div class="job-stages-item-image">
+                                    <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide job-stages-item" data-item-type="ux">
+                            <div class="job-stages-item-left">
+                                <div class="job-stages-item-text">
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                </div>
+                            </div>
+                            <div class="job-stages-item-right" v-if="window.width > 1023">
+                                <div class="job-stages-item-image">
+                                    <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="job-stages-slides job-stages-slides--3">
+            <div class="job-stages-trig"></div>
+            <div class="job-stages-slide">
+                <div class="job-stages-title-triggers">
+                    <div class="job-stages-title-trigger isActive">Front-end разработка</div>
+                    <div class="job-stages-title-trigger">Back-end разработка</div>
+                </div>
+                <div class="glide__arrows job-stages-arrows" data-glide-el="controls">
+                    <button class="job-stages-arrow job-stages-arrow--prev" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                    <button class="job-stages-arrow job-stages-arrow job-stages--next" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                </div> 
+                <div class="glide__track job-stages-track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        @@for (var i = 0; i < 3; i++) {
+                            <li class="glide__slide job-stages-item">
+                                <div class="job-stages-item-left">
+                                    <div class="job-stages-item-text">
+                                        <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                        <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                        <p>Мы автоматизируем и стандартизируем разработку в своей компании. Все проекты проверяем по чек-листам и покрываем тестами. Умеем работать с персональными данными по 152-ФЗ и с порядком применения ККТ для соответствия разрабатываемых проектов по 54-ФЗ.</p>
+                                    </div>
+                                </div>
+                                <div class="job-stages-item-right" v-if="window.width > 1023">
+                                    <div class="job-stages-item-image">
+                                        <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="job-stages-support" id="job-analitics" :class="{'mobile': window.width <=1023}">
+        <div class="job-stages-support-left" :class="{'mobile': window.width <=1023}">
+            <div class="job-stages-trigger" v-if="window.width > 1023">
+                <div class="in">
+                    <div class="number">5</div>
+                    <div class="text">Поддержка</div>
+                </div>
+            </div>
+            <div class="job-stages-support-slides">
+                <div class="glide__arrows web-slider-arrows" data-glide-el="controls" v-if="window.width <= 1023">
+                    <button class="web-slider-arrow web-slider-arrow--prev" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                    <button class="web-slider-arrow web-slider-arrow web-slider-arrow--next" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                </div> 
+                <div class="glide__track job-stages-support-left-track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="job-stages-support-left-item">
+                            <div class="job-stages-support-image" v-if="window.width <= 1023">
+                                <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+                            </div>
+                            <div class="job-stages-support-title">
+                                Поддержка Поддержка
+                            </div>
+                            <div class="job-stages-support-text">
+                                Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше. Наш подход к дизайну и разработке создает впечатляющие, привлекательные бренды, которые возвращают вам творческий потенциал.Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше.
+                            </div>
+                        </li>
+                        @@for (var i = 0; i < 3; i++) {
+                            <li class="job-stages-support-left-item">
+                                <div class="job-stages-support-image" v-if="window.width <= 1023">
+                                    <img src="https://picsum.photos/192`+ i +`" width="100%" height="100%" alt="">
+                                </div>
+                                <div class="job-stages-support-title">
+                                    Поддержка
+                                </div>
+                                <div class="job-stages-support-text">
+                                    Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше. Наш подход к дизайну и разработке создает впечатляющие, привлекательные бренды, которые возвращают вам творческий потенциал.Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше.
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                
+                <div class="glide__arrows job-stages-support-arrows" data-glide-el="controls" v-if="window.width > 1023">
+                    <button class="job-stages-support-arrow job-stages-support-arrow--prev" data-glide-dir="<">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                    <button class="job-stages-support-arrow job-stages-support-arrow job-stages-support--next" data-glide-dir=">">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 89 38" fill="#121423"><path d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"></path></svg>
+                    </button>
+                </div> 
+            </div>
+            
+        </div>
+        <div class="job-stages-support-right" v-if="window.width > 1023">
+            <div class="glide__track job-stages-support-right-track" data-glide-el="track">
+                <ul class="glide__slides">
+                    @@for (var i = 0; i < 3; i++) {
+                        <li class="job-stages-support-right-item">
+                            <img src="https://picsum.photos/192`+ i +`" width="100%" height="100%" alt="">
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="job-stages-management-bottom-right" v-if="window.width <= 1023">
+        <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+    </div>
+    <div class="job-stages-management" id="job-management">
+        <div class="job-stages-management-top">
+            <div class="job-stages-management-top-left" v-if="window.width > 1023">
+                <div class="job-stages-trigger">
+                    <div class="in">
+                        <div class="number">6</div>
+                        <div class="text">Менеджмент</div>
+                    </div>
+                </div>
+            </div>
+            <div class="job-stages-management-top-right">
+                <div class="title">Менеджмент</div>
+                <div class="text">Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше. Наш подход к дизайну и разработке создает впечатляющие, привлекательные бренды, которые возвращают вам творческий потенциал.</div>
+            </div>
+        </div>
+        <div class="job-stages-management-bottom">
+            <div class="job-stages-management-bottom-left">
+                <p>Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше. Наш подход к дизайну и разработке создает впечатляющие, привлекательные бренды, которые возвращают вам творческий потенциал.</p>
+                <p>Это прогрессивное дизайнерское агентство, обладающее техническими и творческими навыками, чтобы воплотить ваш бренд стал лучше. Наш подход к дизайну и разработке создает впечатляющие, привлекательные бренды, которые возвращают вам творческий потенциал.</p>
+            </div>
+            <div class="job-stages-management-bottom-right" v-if="window.width > 1023">
+                <img src="https://picsum.photos/1920" width="100%" height="100%" alt="">
+            </div>
+        </div>
+    </div>
+</section>

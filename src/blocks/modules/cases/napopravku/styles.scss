@@ -1,0 +1,117 @@
+.napopravku {
+    background: linear-gradient(0deg, #F16B84, #F16B84), #DD2F44;
+}
+.napopravku__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #69B6C1, #69B6C1), #E2E2E2;
+    opacity: 0;
+    transition: all .6s ease;
+}
+.napopravku__image {
+    width: vw(312);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - #{vw(50)});
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transition: all .6s ease;
+}
+.napopravku__circle {
+    width: vw(85);
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    transition: left .6s ease, top .6s ease, bottom .6s ease, right .6s ease, opacity .6s ease;
+}
+.napopravku__circle2 {
+    width: vw(226);
+    position: absolute;
+    right: -100%;
+    top: -100%;
+    transition: left .6s ease, top .6s ease, bottom .6s ease, right .6s ease, opacity .6s ease;
+}
+.napopravku__pharmacy {
+    width: vw(124);
+    position: absolute;
+    left: -100%;
+    top: vw(309);
+    transition: left .6s ease, top .6s ease, bottom .6s ease, right .6s ease, opacity .6s ease;
+}
+.napopravku__cells {
+    width: vw(79);
+    position: absolute;
+    right: -100%;
+    top: vw(318);
+    transition: left .6s ease, top .6s ease, bottom .6s ease, right .6s ease, opacity .6s ease;
+}
+.napopravku__medical {
+    width: vw(79);
+    position: absolute;
+    right: -100%;
+    bottom: -100%;
+    transition: left .6s ease, top .6s ease, bottom .6s ease, right .6s ease, opacity .6s ease;
+}
+.napopravku:hover .napopravku__overlay,
+.napopravku.mobile .napopravku__overlay {
+    opacity: 1;
+}
+
+.napopravku:hover .napopravku__image {
+    animation: heartbeat 1s ease infinite;
+}
+
+.napopravku:hover .napopravku__circle,
+.napopravku.mobile .napopravku__circle {
+    left: vw(160);
+    top: vw(168);
+}
+.napopravku:hover .napopravku__circle2,
+.napopravku.mobile .napopravku__circle2 {
+    top: vw(-94);
+    right: vw(52);
+}
+.napopravku:hover .napopravku__pharmacy,
+.napopravku.mobile .napopravku__pharmacy {
+    left: vw(50);
+}
+.napopravku:hover .napopravku__cells,
+.napopravku.mobile .napopravku__cells {
+    right: vw(212);
+}
+.napopravku:hover .napopravku__medical,
+.napopravku.mobile .napopravku__medical {
+    right: vw(52);
+    bottom: vw(146);
+}
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale( .75 );
+  }
+  20%
+  {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale( 1 );
+  }
+  40%
+  {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale( .75 );
+  }
+  60%
+  {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale( 1 );
+  }
+  80%
+  {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale( .75 );
+  }
+  100%
+  {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg) scale( .75 );
+  }
+}

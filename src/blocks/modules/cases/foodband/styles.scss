@@ -1,0 +1,114 @@
+.foodband {
+    background: #EEC996;
+    transition: background .6s ease;
+}
+.foodband__image {
+    position: absolute;
+    transition: left .6s ease, top .6s ease, bottom .6s ease, right .6s ease, opacity .6s ease;
+    z-index: 2;
+    img {
+        height: 100%;
+    }
+}
+.foodband__image--center {
+    top: calc(50% - #{vw(28)});
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: vw(534);
+}
+.foodband__image--left {
+    top: -100%;
+    left: -100%;
+    height: vw(287);
+}
+.foodband__image--right {
+    top: -100%;
+    right: -100%;
+    height: vw(124);
+}
+.foodband__image--pepper-left {
+    bottom: vw(226);
+    left: vw(162); 
+    height: vw(127);
+    opacity: 0;
+}
+.foodband__image--pepper-right {
+    bottom: vw(181);
+    right: vw(241); 
+    height: vw(80);
+    opacity: 0;
+}
+.foodband__image--leaf {
+    bottom: vw(239);
+    right: vw(48);
+    height: vw(221);
+    opacity: 0;
+    z-index: 3;
+}
+.foodband__image--acces {
+    bottom: -100%;
+    right: -100%; 
+    height: vw(234);
+}
+.foodband:hover,
+.foodband.mobile {
+    background: #F6F6F8;
+}
+.foodband.mobile .foodband__image--left,
+.foodband:hover .foodband__image--left {
+    left: vw(-17);
+    top: vw(36);
+}
+.foodband.mobile .foodband__image--right,
+.foodband:hover .foodband__image--right {
+    right: vw(187);
+    top: vw(81);
+}
+.foodband.mobile .foodband__image--pepper-left,
+.foodband:hover .foodband__image--pepper-left {
+    opacity: 1;        
+}
+.foodband.mobile .foodband__image--pepper-right,
+.foodband:hover .foodband__image--pepper-right {
+    opacity: 1;        
+}
+.foodband.mobile .foodband__image--leaf,
+.foodband:hover .foodband__image--leaf {
+    opacity: 1;
+}
+.foodband.mobile .foodband__image--acces,
+.foodband:hover .foodband__image--acces {
+    bottom: vw(50);
+    right: 0;
+}
+.foodband.mobile .foodband__image--center {
+    height: 171px;
+}
+.foodband.mobile .foodband__image--left {
+    height: 85px;
+    top: 0;
+    left: 0;
+}
+.foodband.mobile .foodband__image--right {
+    height: 39px;
+    top: 17px;
+    right: 84px;
+}
+.foodband.mobile .foodband__image--pepper-left {
+    height: 39px;    
+    left: 79px;
+    top: 111px;  
+}
+.foodband.mobile .foodband__image--pepper-right {
+    height: 25px;      
+}
+.foodband.mobile .foodband__image--leaf {
+    width: 57px;
+    top: 136px;
+    right: 97px;
+}
+.foodband.mobile .foodband__image--acces {
+    height: 75px;
+    right: 0;
+    bottom: 0;
+}

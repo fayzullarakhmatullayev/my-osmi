@@ -1,0 +1,147 @@
+.cases {
+  &__wrapper {
+    position: relative;
+    z-index: 5;
+    padding-bottom: 15.625vw;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 1023px) {
+      display: block;
+    }
+  }
+  &__item {
+    width: 50%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    @media (max-width: 1023px) {
+      width: 100%;
+    }
+    * {
+      // pointer-events: none;
+    }
+    &:after {
+      content: "";
+      display: block;
+      padding-top: 75%;
+      pointer-events: none;
+    }
+    @media (max-width: 1023px) {
+      &:after {
+        padding-top: 60%;
+      }
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+  &__item-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: vw(50);
+    box-sizing: border-box;
+  }
+
+  &__item-title {
+    font-weight: bold;
+    font-size: vw(36);
+    margin-bottom: vw(16);
+    line-height: vw(60);
+    color: #ffffff;
+    height: vw(60);
+    overflow: hidden;
+    // transform: translateX(-100%);
+    &--forslide {
+      transition: all 0.6s ease;
+    }
+  }
+
+  &__item-text {
+    font-size: vw(20);
+    line-height: 160%;
+    color: #ffffff;
+    padding-right: vw(323);
+  }
+
+  @media (max-width: 1023px) {
+    &__item &__item-bottom {
+      padding: 15px 20px;
+    }
+    &__item &__item-title {
+      font-size: 16px;
+      margin-bottom: 2px;
+      height: auto;
+      line-height: 160%;
+      // transform: translateX(0) !important;
+    }
+    &__item &__item-text {
+      font-size: 12px;
+      padding-right: 0;
+    }
+  }
+  &__item:hover &__item-title--forslide {
+    transform: translateY(-100%);
+    // line-height: 160%;
+  }
+  &__item--dark &__item-text,
+  &__item--dark &__item-title {
+    color: #121423;
+  }
+  &__item--lightonhover &__item-text,
+  &__item--lightonhover &__item-title {
+    color: #121423;
+    transition: all 0.6s ease;
+  }
+  &__item--lightonhover:hover &__item-text,
+  &__item--lightonhover:hover &__item-title {
+    color: #fff;
+  }
+  &__item--lightonhover.mobile &__item-text,
+  &__item--lightonhover.mobile &__item-title {
+    color: #fff;
+  }
+}
+
+.blog-items-buttons__wrap {
+  padding: 0 2.60417vw;
+  box-sizing: border-box;
+}
+
+.career-first {
+  position: relative;
+  z-index: 5;
+}
+.cases__wrapper,
+.main-cases {
+  @import "./careof/styles";
+  @import "./zorge/styles";
+  @import "./bioline/styles";
+  @import "./medex/styles";
+  @import "./malina/styles";
+  @import "./mmcite/styles";
+  @import "./mukomol/styles";
+  @import "./happybaby/styles";
+  @import "./englex/styles";
+  @import "./fieldwire/styles";
+  @import "./foodband/styles";
+  @import "./mosplita/styles";
+  @import "./ast/styles";
+  @import "./stroydvor/styles";
+  @import "./utilico/styles";
+  @import "./homeoutlet/styles";
+  @import "./lonmadi/styles";
+  @import "./intacto/styles";
+  @import "./promprint/styles";
+  @import "./frost/styles";
+  @import "./satepai/styles";
+  @import "./napopravku/styles";
+  @import "./selis/styles";
+  @import "./karta/styles";
+  @import "./vineta/styles";
+}

@@ -1,0 +1,48 @@
+.satepai {
+    background: linear-gradient(0deg, #F2F4F6, #F2F4F6);
+    // &:hover &__image {
+        //     transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        // }  
+}
+.satepai__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all .6s ease;
+}
+.satepai__ring {
+    width: vw(385);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transition: all .6s ease;
+    // mix-blend-mode: darken;
+}
+.satepai__diamond {
+    width: vw(174);
+    position: absolute;
+    left: calc(50% - #{vw(12)});
+    top: -100%;
+    transform: translateX(-50%) rotate(0deg);
+    transition: all .6s ease;
+    // mix-blend-mode: darken;
+}
+.satepai:hover .satepai__overlay,
+.satepai.mobile .satepai__overlay {
+    opacity: 1;
+}
+.satepai:not(.mobile):hover .satepai__diamond {
+    top: vw(185);
+}
+.satepai.mobile .satepai__diamond {
+    width: 58px;
+    top: calc(50% - 58px);
+    left: calc(50% - 5px);
+}
+.satepai.mobile .satepai__ring {
+    width: 128px;
+}

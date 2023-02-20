@@ -1,0 +1,203 @@
+.company-raiting {
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  &-track {
+    margin-top: vw(120);
+  }
+  &:not(.mobile) {
+    background: #121423;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxOTk5IiB2aWV3Qm94PSIwIDAgMTkyMCAxOTk5IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNDg3LjVWMTk5OUgxOTIwVjAuMzQ4NjMzSDk1MS4yNDZDNjIzLjc0NiAwLjM0ODYzMyAzMTEuNzE2IDEzOS43MDIgOTMuMTM0OCAzODMuNTg1TDAgNDg3LjVaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K")
+        left 50% top 0 / 122% no-repeat;
+    }
+    padding: vw(70) 0 vw(240);
+  }
+  &.mobile {
+    padding: 40px 0 150px;
+  }
+  &-title {
+    @extend %white;
+    text-transform: uppercase;
+    mix-blend-mode: exclusion;
+    color: #e9f1ff;
+  }
+  &:not(.mobile) &-title {
+    overflow: hidden;
+    padding: 0 vw(50) vw(178);
+    white-space: nowrap;
+    margin-top: vw(60);
+    position: relative;
+    z-index: 10;
+  }
+  &.mobile &-title {
+    padding: 0 20px 50px;
+    font-size: 45px;
+    line-height: 55px;
+    color: #121423;
+  }
+  &-items {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+    scrollbar-width: none;
+    justify-content: center;
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+  &:not(.mobile) &-items {
+    padding: 0 vw(68);
+    position: relative;
+    z-index: 10;
+  }
+  &.mobile &-items {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+  &-item {
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 4;
+      img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+  }
+  &:not(.mobile) &-item {
+    min-width: vw(384);
+    min-height: vw(384);
+    max-width: vw(384);
+    max-height: vw(384);
+    padding: vw(100);
+    border: vw(2) solid #121423;
+    margin: 0 vw(-18);
+    .button-circle {
+      background: $bgColor;
+    }
+    &.isActive {
+      background: $bgColor;
+    }
+    &.isActive,
+    &:hover {
+      z-index: 4;
+      background: #121423;
+      transition: 0.3s background 0.3s ease;
+      .image {
+        filter: contrast(0) brightness(10);
+      }
+    }
+  }
+  &.mobile &-item {
+    min-width: 146px;
+    min-height: 146px;
+    max-width: 146px;
+    max-height: 146px;
+    padding: 27px;
+    border: 2px solid #121423;
+    margin: 0 -5px;
+    .button-circle {
+      display: none;
+    }
+    &.isActive {
+      background: $bgColor;
+      z-index: 4;
+      .image {
+        filter: contrast(0) brightness(10);
+      }
+    }
+  }
+  &:not(.mobile) &-texts {
+    padding: 0 vw(50);
+    display: flex;
+    align-items: flex-start;
+  }
+  &.mobile &-texts {
+    padding: 0 20px;
+  }
+  &-texts-left {
+    color: $mainColor;
+  }
+  &:not(.mobile) &-texts-left {
+    margin-right: vw(50);
+    width: calc(100% - #{vw(50)} - #{vw(920)});
+  }
+  &.mobile &-texts-left {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &:not(.mobile) &-texts-right {
+    width: vw(920);
+  }
+  &-texts-left-item {
+    .place {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .year {
+      font-weight: bold;
+    }
+  }
+  &:not(.mobile) &-texts-left-item {
+    .place {
+      font-size: vw(80);
+      line-height: vw(80);
+      margin-bottom: vw(37);
+    }
+    .year {
+      font-size: vw(50);
+      line-height: vw(50);
+    }
+  }
+  &.mobile &-texts-left-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .place {
+      font-size: 30px;
+      line-height: 30px;
+    }
+    .year {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+  &-texts-right-item {
+    white-space: initial;
+    color: #121423;
+    font-weight: normal;
+  }
+  &:not(.mobile) &-texts-right-item {
+    font-size: vw(30);
+    line-height: vw(50);
+  }
+  &.mobile &-texts-right-item {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

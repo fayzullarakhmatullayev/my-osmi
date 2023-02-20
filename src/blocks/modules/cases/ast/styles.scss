@@ -1,0 +1,108 @@
+.ast {
+    background: #009F3C;
+}
+.ast__image {
+    width: vw(317);
+    height: vw(317);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - #{vw(50)});
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform .6s linear, width .6s linear, height .6s linear;
+    z-index: 4;
+}
+.ast__image-ship {
+    font-size: 0;
+    width: vw(200);
+    height: vw(200);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - #{vw(50)});
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform .6s linear, width .6s linear, height .6s linear, opacity .6s linear;
+    opacity: 0;
+}
+.ast__image-car {
+    width: vw(200);
+    height: vw(200);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - #{vw(50)});
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform .6s linear, width .6s linear, height .6s linear, opacity .6s linear;
+    opacity: 0;
+    font-size: 0;
+}
+.ast__image-airplane {
+    width: vw(200);
+    height: vw(200);
+    position: absolute;
+    left: 50%;
+    top: calc(50% - #{vw(50)});
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform .6s linear, width .6s linear, height .6s linear, opacity .6s linear;
+    opacity: 0;
+    font-size: 0;
+}
+.ast:not(.mobile):hover .ast__image {
+    width: vw(195);
+    height: vw(195);
+    transform: translateX(-50%) translateY(-50%) rotate(8000deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform 60s linear, width .6s linear, height .6s linear;
+}
+.ast.mobile .ast__image {
+    width: 67px;
+    height: 67px;
+    transform: translateX(-50%) translateY(-50%) rotate(0);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    opacity: 1;
+}
+.ast:not(.mobile):hover .ast__image-ship {
+    width: vw(317);
+    height: vw(317);
+    transform: translateX(-50%) translateY(-50%) rotate(-8000deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform 60s linear, width .6s linear, height .6s linear;
+    opacity: 1;
+}  
+.ast.mobile .ast__image-ship {
+    width: 109px;
+    height: 109px;
+    transform: translateX(-50%) translateY(-50%) rotate(0);
+    opacity: 1;
+}
+.ast:not(.mobile):hover .ast__image-car {
+    width: vw(414);
+    height: vw(414);
+    transform: translateX(-50%) translateY(-50%) rotate(-8000deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform 80s linear, width .6s linear, height .6s linear;
+    opacity: 1;
+}  
+.ast.mobile .ast__image-car {
+    width: 139px;
+    height: 139px;
+    transform: translateX(-50%) translateY(-50%) rotate(0);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    opacity: 1;
+}
+.ast:not(.mobile):hover .ast__image-airplane {
+    width: vw(493);
+    height: vw(493);
+    transform: translateX(-50%) translateY(-50%) rotate(-8000deg);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    transition: transform 50s linear, width .6s linear, height .6s linear;
+    opacity: 1;
+}  
+.ast.mobile .ast__image-airplane {
+    width: 169px;
+    height: 169px;
+    transform: translateX(-50%) translateY(-50%) rotate(0);
+    transform-box: fill-box; transform-origin: 50% 50%;
+    opacity: 1;
+}

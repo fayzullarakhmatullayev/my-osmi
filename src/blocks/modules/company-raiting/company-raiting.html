@@ -1,0 +1,36 @@
+<section class="company-raiting">
+  <h1 class="company-raiting-title animated-title">Мы в рейтингах</h1>
+  <div class="company-raiting-items">
+    @@for (var i = 0; i < 10; i++) {
+    <div class="company-raiting-item" data-item-id="`+ i +`">
+      <div class="image">
+        <img src="img/tagline.png" width="100%" height="100%" alt="" />
+      </div>
+    </div>
+    }
+  </div>
+  <div class="company-raiting-slider">
+    <div class="glide__track company-raiting-track" data-glide-el="track">
+      <ul class="glide__slides">
+        @@for (var i = 1; i < 11; i++) {
+        <li class="company-raiting-texts">
+          <div class="company-raiting-texts-left">
+            <div class="company-raiting-texts-left-item">
+              <div class="place">`+ i +` место</div>
+              <div class="year">2021 год</div>
+            </div>
+          </div>
+          <div class="company-raiting-texts-right">
+            <div class="company-raiting-texts-right-item">
+              У нас стратегическое видение. Это значит, что каждым действием
+              стоит понимние, что, зачем и как надо делать, чтобы добиться
+              результата. Красивая верстка сайта не поможет вам больше
+              зарабатывать....
+            </div>
+          </div>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

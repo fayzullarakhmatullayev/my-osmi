@@ -1,0 +1,77 @@
+.promprint {
+    background: linear-gradient(180deg, #74BFFF 5.71%, #004784 99.97%, #005BAA 99.98%), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(180deg, #74BFFF 5.71%, #004784 99.97%, #005BAA 99.98%), linear-gradient(0deg, #100E0C, #100E0C), linear-gradient(0deg, #F06666, #F06666), #E2E2E2;
+}
+.promprint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all .6s ease;
+    background: linear-gradient(0deg, #333537, #333537), linear-gradient(0deg, #100E0C, #100E0C);
+}
+.promprint__image {
+    height: vw(530);
+    position: absolute;
+    left: 50%;
+    top: vw(-20);
+    transform: translateX(-50%) rotate(0deg);
+    transition: all .6s ease;
+    transform-origin: 50% 0;
+    z-index: 2;
+}
+.promprint__bottom {
+    z-index: 2;
+}
+.promprint:hover:before,
+.promprint.mobile:before {
+    opacity: 0;
+}
+.promprint:not(.mobile):hover .promprint__image {
+    animation: wheep 10s infinite ease;
+}  
+.promprint.mobile .promprint__image {
+    height: 165px;
+}
+
+@keyframes wheep {
+    0% {
+        transform: translateX(-50%) rotate(0)
+    }
+    5% {
+        transform: translateX(-50%) rotate(15deg)
+    }
+    10% {
+        transform: translateX(-50%) rotate(-14deg)
+    }
+    20% {
+        transform: translateX(-50%) rotate(13deg)
+    }
+    30% {
+        transform: translateX(-50%) rotate(-11deg)
+    }
+    40% {
+        transform: translateX(-50%) rotate(9deg)
+    }
+    50% {
+        transform: translateX(-50%) rotate(-8deg)
+    }
+    60% {
+        transform: translateX(-50%) rotate(6deg)
+    }
+    70% {
+        transform: translateX(-50%) rotate(-4deg)
+    }
+    80% {
+        transform: translateX(-50%) rotate(2deg)
+    }
+    90% {
+        transform: translateX(-50%) rotate(-1deg)
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg)
+    }
+}

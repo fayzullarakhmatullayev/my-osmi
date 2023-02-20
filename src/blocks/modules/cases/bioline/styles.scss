@@ -1,0 +1,25 @@
+.bioline__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #66C9BA;
+    padding-bottom: vw(120);
+    
+    img {
+        height: vw(455);
+        width: auto;
+        pointer-events: none;
+    }
+}
+.bioline__image--hidden {
+    background: #FF5000;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+.bioline__bottom {
+    pointer-events: none;
+}

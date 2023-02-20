@@ -1,0 +1,25 @@
+// .medex {
+//     // background: linear-gradient(0.61deg, #617A84 0.49%, #87A9B7 101.49%);
+// }
+.medex.mobile {
+  background: url("../img/medex_mobile_bg.png") 50% 50% / cover no-repeat !important;
+}
+.medex__video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+}
+
+.medex__bottom {
+  z-index: 4;
+}

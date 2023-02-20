@@ -1,0 +1,136 @@
+<section class="career-blog" :class="{'mobile': window.width <=1023}">
+  <h1 class="career-blog-title animated-title">Мы&nbsp;на&nbsp;конференциях</h1>
+
+  <div class="glide career-blog-items">
+    <div class="career-blog-buttons">
+      <div class="career-blog-buttons-left">
+        <button class="news-and-trends-button btn btn--pink">
+          <span class="btn__content">
+            <span class="btn__text">Команда</span>
+          </span>
+        </button>
+        <button class="news-and-trends-button btn btn--pink">
+          <span class="btn__content">
+            <span class="btn__text">Разработка</span>
+          </span>
+        </button>
+      </div>
+      <div
+        data-glide-el="controls"
+        class="glide__arrows company-reviews-arrows"
+      >
+        <button
+          data-glide-dir="<"
+          class="company-reviews-arrow company-reviews-arrow--prev"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 89 38"
+            fill="#121423"
+          >
+            <path
+              d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"
+            ></path>
+          </svg>
+        </button>
+        <button
+          data-glide-dir=">"
+          class="company-reviews-arrow company-reviews-arrow company-reviews---next"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 89 38"
+            fill="#121423"
+          >
+            <path
+              d="M87.7678 20.7678C88.7441 19.7914 88.7441 18.2085 87.7678 17.2322L71.8579 1.32232C70.8816 0.346014 69.2986 0.346014 68.3223 1.32232C67.346 2.29864 67.346 3.88155 68.3223 4.85786L82.4645 19L68.3223 33.1421C67.346 34.1184 67.346 35.7014 68.3223 36.6777C69.2986 37.654 70.8816 37.654 71.8579 36.6777L87.7678 20.7678ZM2.18557e-07 21.5L86 21.5L86 16.5L-2.18557e-07 16.5L2.18557e-07 21.5Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="glide__track career-blog-items-track" data-glide-el="track">
+      <div class="glide__slides career-blog-items-slides">
+        @@for (var i = 1; i < 3; i++) {
+        <a href="#" class="glide__slide career-blog-item" data-ctegory="team">
+          <div class="career-blog-item-image">
+            <img
+              src="https://picsum.photos/460/350"
+              width="100%"
+              height="100%"
+              alt=""
+            />
+          </div>
+          <time pubdate datetime="21.04.2021" class="career-blog-item-date"
+            >21.04.2021</time
+          >
+          <h5 class="career-blog-item-title">Название проекта</h5>
+          <p class="career-blog-item-description">Краткое описание</p>
+        </a>
+        <a
+          href="#"
+          class="glide__slide career-blog-item"
+          data-ctegory="development"
+        >
+          <div class="career-blog-item-image">
+            <img
+              src="https://picsum.photos/550/650"
+              width="100%"
+              height="100%"
+              alt=""
+            />
+          </div>
+          <time pubdate datetime="21.04.2021" class="career-blog-item-date"
+            >21.04.2021</time
+          >
+          <h5 class="career-blog-item-title">Название проекта</h5>
+          <p class="career-blog-item-description">Краткое описание</p>
+        </a>
+        <a href="#" class="glide__slide career-blog-item" data-ctegory="team">
+          <div class="career-blog-item-image">
+            <img
+              src="https://picsum.photos/600/370"
+              width="100%"
+              height="100%"
+              alt=""
+            />
+          </div>
+          <time pubdate datetime="21.04.2021" class="career-blog-item-date"
+            >21.04.2021</time
+          >
+          <h5 class="career-blog-item-title">Название проекта</h5>
+          <p class="career-blog-item-description">Краткое описание</p>
+        </a>
+        <a
+          href="#"
+          class="glide__slide career-blog-item"
+          data-ctegory="development"
+        >
+          <div class="career-blog-item-image">
+            <img
+              src="https://picsum.photos/550/650"
+              width="100%"
+              height="100%"
+              alt=""
+            />
+          </div>
+          <time pubdate datetime="21.04.2021" class="career-blog-item-date"
+            >21.04.2021</time
+          >
+          <h5 class="career-blog-item-title">Название проекта</h5>
+          <p class="career-blog-item-description">Краткое описание</p>
+        </a>
+        }
+      </div>
+    </div>
+    <button class="btn btn--pink more_cases">
+      <span class="btn__content">
+        <span class="btn__text">Показать еще</span>
+      </span>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+.selis {
+    background: url('../img/selis_bg.jpg') 50% 50%/cover no-repeat;
+}
+.selis__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    top: 0;
+    transition: all .6s ease;
+    opacity: 1;
+    width: 100%;
+}
+.selis:hover .selis__image,
+.selis.mobile .selis__image {
+    transform: scale(1.4);
+    opacity: 0;
+}  

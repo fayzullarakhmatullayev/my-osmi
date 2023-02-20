@@ -1,0 +1,63 @@
+.cookie-form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $bgColor;
+  z-index: 250;
+  &__in {
+    padding: vw(20) vw(127);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__message {
+    font-size: vw(22);
+    line-height: vw(50);
+    color: #ffffff;
+  }
+  &__button {
+    padding: vw(19) vw(53);
+    border-radius: vw(10);
+    font-size: vw(22);
+    line-height: vw(25);
+    background: $mainColor;
+    cursor: pointer;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transform: rotateZ(0);
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+  &.mobile &__button {
+    color: #ffffff !important;
+    .button-circle {
+      display: none !important;
+    }
+  }
+  &.mobile &__in {
+    padding: 20px;
+    flex-direction: column;
+  }
+  &.mobile &__message {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  &.mobile &__button {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

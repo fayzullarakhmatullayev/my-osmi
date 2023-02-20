@@ -1,0 +1,57 @@
+.application-form {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    z-index: 250;
+    padding: vw(50) vw(100);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    &.isOpened {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.mobile {
+        padding: 20px;
+    }
+    &__in {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__form {
+        background: $bgColor;
+        overflow: auto;
+        max-height: 100%;
+        position: relative;
+        border-radius: 10px;
+    }
+    &__form-closer {
+        position: absolute;
+        top: vw(20);
+        right: vw(20);
+        width: vw(20);
+        height: vw(20);
+        font-size: 0;
+        cursor: pointer;
+        z-index: 10;
+    }
+    &.mobile &__form-closer {
+        right: 20px;
+        top: 20px;
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+        box-sizing: border-box;
+    }
+    .main-question.modal {
+        padding: vw(130) vw(55) vw(179);
+    }
+    .main-question.modal.mobile {
+        padding: 40px 20px !important;
+    }
+}

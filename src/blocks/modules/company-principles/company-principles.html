@@ -1,0 +1,59 @@
+<section class="company-principles">
+  <h1 class="company-principles-title animated-title">Принципы работы</h1>
+  <div class="company-principles-in">
+    <div class="company-principles-left">
+      <ul class="company-principles-texts">
+        @@for (var i = 1; i < 9; i++) {
+        <li class="company-principles-text" data-text-index="`+ i +`">
+          <div class="counter">0`+ i +`</div>
+          <div class="text">Lorem ipsum dolor sit amet.</div>
+        </li>
+        }
+      </ul>
+      <div class="carousel-options">
+        <p>
+          <label>
+            Картинок:
+            <input
+              class="cells-range"
+              type="range"
+              min="3"
+              max="11"
+              value="8"
+            />
+          </label>
+        </p>
+        <p>
+          <button class="previous-button">Пред</button>
+          <button class="next-button">След</button>
+        </p>
+        <p>
+          Orientation:
+          <label>
+            <input type="radio" name="orientation" value="horizontal" checked />
+            horizontal
+          </label>
+          <label>
+            <input type="radio" name="orientation" value="vertical" />
+            vertical
+          </label>
+        </p>
+      </div>
+    </div>
+    <div class="company-principles-right">
+      <div class="company-principles-scene">
+        <div class="company-principles-carousel">
+          @@for (var i = 1; i < 9; i++) {
+          <div class="company-principles-cell" data-cell-index="`+ i +`">
+            <div class="company-principles-cell-text">`+ i +`</div>
+            <div class="company-principles-cell-image">
+              <img src="https://picsum.photos/600/800?random=`+ i +`" alt="" />
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="company-principles-circle"></div>
+</section>

@@ -1,0 +1,35 @@
+<section class="career-first">
+  <h1 class="career-first-title">@@text</h1>
+  <div class="career-first-info_mobile">
+    <div class="career-first-tentacle">
+      <img
+        src="img/svg/tentacle_static.svg"
+        width="100%"
+        alt=""
+        v-if="isSafary"
+      />
+      <img src="img/svg/tentacle.svg" width="100%" alt="" v-else />
+    </div>
+    <div class="career-first-text">
+      Настал тот самый момент, когда нам нужно еще больше свежих мозгов для
+      самых смелых проектов
+    </div>
+  </div>
+  @@if (isInfoHidden !== true) {
+  <div class="career-first-info">
+    <div class="career-first-tentacle">
+      <img
+        src="img/svg/tentacle_static.svg"
+        width="100%"
+        alt=""
+        v-if="isSafary"
+      />
+      <img src="img/svg/tentacle.svg" width="100%" alt="" v-else />
+    </div>
+    <div class="career-first-text">
+      Настал тот самый момент, когда нам нужно еще больше свежих мозгов для
+      самых смелых проектов
+    </div>
+  </div>
+  }
+</section>

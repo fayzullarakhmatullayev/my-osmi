@@ -1,0 +1,39 @@
+.zorge {
+    background: url('../img/zorge.png') 50% 50% / cover no-repeat;
+}
+.zorge__shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 32.91%, rgba(0, 0, 0, 0.86) 100%);
+    transition: all 0.6s ease;
+    opacity: 1;
+}
+.zorge__shadow--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.69);
+    transition: all 0.6s ease;
+    opacity: 0;
+    mix-blend-mode: multiply;
+}
+.zorge:hover .zorge__shadow--hover {
+    opacity: 1;
+}
+.zorge:hover .zorge__shadow {
+    opacity: 0;
+}
+
+@media (max-width: 1023px){
+    .zorge .zorge__shadow--hover {
+        opacity: 1; 
+    }
+    .zorge .zorge__shadow {
+        opacity: 0; 
+    }
+}

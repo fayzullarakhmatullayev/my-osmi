@@ -1,0 +1,27 @@
+.karta {
+    background: url('../img/karta_bg.jpg') 50% 50%/cover no-repeat;
+}
+.karta__image {
+    position: absolute;
+    left: vw(-96);
+    right: vw(-96);
+    top: vw(-28);
+    bottom: vw(-28);
+    background: url('../img/karta.png') 50% 50%/cover no-repeat;
+    transition: opacity .6s ease;
+    opacity: 0;
+}
+.karta__cloud {
+    position: absolute;
+    width: vw(714);
+    left: vw(-245);
+    top: vw(-99);
+    transition: opacity .6s ease;
+    opacity: 0;
+}
+.karta:hover .karta__image,
+.karta:hover .karta__cloud,
+.karta.mobile .karta__image,
+.karta.mobile .karta__cloud {
+    opacity: 1;
+}

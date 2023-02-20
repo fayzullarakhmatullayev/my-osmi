@@ -1,0 +1,196 @@
+.company-about {
+  // background: #121423;
+  &__wrap {
+    position: relative;
+    background: $bgColor;
+  }
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    &_des{
+      display: block;
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+    &_mobile{
+      display: none;
+      @media (max-width: 1023px) {
+        display: block;
+      }
+    }
+  }
+  &:not(.mobile) {
+    padding: vw(191) vw(50) 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  &:not(.mobile) {
+    &:not(.company-about__title) {
+      clip-path: circle(#{vw(1920)} at #{vw(300)} #{vw(300)});
+    }
+  }
+  &.mobile {
+    padding: 110px 20px 184px;
+    clip-path: none !important;
+    position: relative;
+  }
+  &-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #929292;
+  }
+  &-tentacle {
+    position: absolute;
+    top: 180px;
+    right: 0;
+    width: 312px;
+    transform: rotate(180deg);
+  }
+  &:not(.mobile) &-title {
+    font-size: vw(280);
+    line-height: vw(280);
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 11;
+  }
+  &.mobile &-title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  &-in {
+    pointer-events: none;
+  }
+  &:not(.mobile) &-in {
+    display: grid;
+    grid-template-columns:
+      vw(42) vw(241) vw(58) vw(191) vw(82) vw(50) vw(143) vw(101)
+      vw(40) vw(128) vw(44) vw(110) vw(58) vw(53) vw(48) vw(69) vw(82) vw(48) vw(
+        40
+      )
+      vw(98) auto;
+    grid-template-rows:
+      vw(156) vw(52) vw(32) vw(20) vw(52) vw(28) vw(96) vw(52) vw(54)
+      vw(29) vw(17) vw(80) vw(60) vw(56) vw(20) vw(14);
+  }
+  &.mobile &-in {
+    display: block;
+  }
+  &:not(.mobile) &-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 100%;
+    }
+    &:nth-of-type(2) {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 11;
+      grid-column-end: 15;
+    }
+    &:nth-of-type(3) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 18;
+      grid-column-end: 21;
+    }
+    &:nth-of-type(4) {
+      grid-row-start: 7;
+      grid-row-end: 10;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    &:nth-of-type(5) {
+      grid-row-start: 4;
+      grid-row-end: 8;
+      grid-column-start: 19;
+      grid-column-end: 22;
+    }
+    &:nth-of-type(6) {
+      grid-row-start: 8;
+      grid-row-end: 12;
+      grid-column-start: 10;
+      grid-column-end: 12;
+    }
+    &:nth-of-type(7) {
+      grid-row-start: 11;
+      grid-row-end: 14;
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+    &:nth-of-type(8) {
+      grid-row-start: 9;
+      grid-row-end: 13;
+      grid-column-start: 16;
+      grid-column-end: 19;
+    }
+    &:nth-of-type(9) {
+      grid-row-start: 12;
+      grid-row-end: 17;
+      grid-column-start: 7;
+      grid-column-end: 9;
+    }
+    &:nth-of-type(10) {
+      grid-row-start: 5;
+      grid-row-end: 8;
+      grid-column-start: 13;
+      grid-column-end: 17;
+    }
+    &:nth-of-type(11) {
+      grid-row-start: 13;
+      grid-row-end: 16;
+      grid-column-start: 12;
+      grid-column-end: 14;
+    }
+    &:nth-of-type(12) {
+      grid-row-start: 13;
+      grid-row-end: 16;
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    &:nth-of-type(13) {
+      grid-row-start: 7;
+      grid-row-end: 9;
+      grid-column-start: 6;
+      grid-column-end: 8;
+    }
+    &:nth-of-type(14) {
+      grid-row-start: 13;
+      grid-row-end: 16;
+      grid-column-start: 20;
+      grid-column-end: 22;
+    }
+  }
+  &.mobile &-image {
+    display: none;
+  }
+}
+
+.company {
+  background: #fff;
+}
+
+.about_mobile {
+  display: none;
+}
+.about_desktop {
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  .about_mobile {
+    display: block;
+  }
+  .about_desktop {
+    display: none;
+  }
+}
+.company-about:not(.mobile) .company-about-image img {
+  object-fit: contain;
+}

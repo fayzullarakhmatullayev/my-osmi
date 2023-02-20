@@ -1,0 +1,109 @@
+<section id="main-carousel" class="main-carousel">
+  <div class="main-carousel__title">Награды</div>
+  <div class="main-carousel__body">
+    <div class="main-carousel-scene">
+      <div class="main-carousel-carousel">
+        @@for (var i = 1; i < 8; i++) {
+        <div class="main-carousel-cell" data-cell-index="`+ i +`">
+          <div class="main-carousel-cell-text">`+ i +`</div>
+          <div class="main-carousel-cell-image">
+            <img src="https://picsum.photos/600/800?random=`+ i +`" alt="" />
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+
+    <div class="glide main-carousel__text">
+      <div class="main-carousel__text-item">
+        <div class="main-carousel__text-item_titles">
+          @@for (var i = 0; i < 8; i++) {
+          <div class="title" data-title-id="`+ i +`">Высший грейд А+ RUWARD в заказной разработке</div>
+          } 
+        </div>
+        <div class="main-carousel__text-item_texts">
+          @@for (var i = 0; i < 8; i++) {
+          <div class="text" data-text-id="`+ i +`">Отмечена центром сертификации наивысшим рейтингом. Отмечена центром сертификации наивысшим рейтингом</div>
+          }
+        </div>
+        <div class="main-carousel__text-item_gifts">
+          <div class="gift">
+            <div class="gift_in">
+              <div class="left">
+                <div class="left__in">
+                  <div class="badge">120</div>
+                </div>
+              </div>
+              <div class="right">Награды</div>
+            </div>
+          </div>
+        </div>
+        <div class="main-carousel__arrows">
+          <div
+            class="main-carousel__arrow main-carousel__arrow--prev previous-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              viewBox="0 0 101 38"
+              fill="none"
+            >
+              <path
+                d="M1.23212 17.2322C0.255814 18.2086 0.255814 19.7915 1.23212 20.7678L17.142 36.6777C18.1183 37.654 19.7013 37.654 20.6776 36.6777C21.6539 35.7014 21.6539 34.1185 20.6776 33.1421L6.53543 19L20.6776 4.85787C21.6539 3.88156 21.6539 2.29865 20.6776 1.32234C19.7013 0.346026 18.1183 0.346026 17.142 1.32234L1.23212 17.2322ZM100.944 16.5L2.99989 16.5L2.99989 21.5L100.944 21.5L100.944 16.5Z"
+                fill="#121423"
+              />
+            </svg>
+          </div>
+          <div class="main-carousel__grades">
+            <span class="from">0</span>° -
+            <span class="to">360°</span>
+          </div>
+          <div
+            class="main-carousel__arrow main-carousel__arrow--next next-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              viewBox="0 0 101 38"
+              fill="none"
+            >
+              <path
+                d="M1.23212 17.2322C0.255814 18.2086 0.255814 19.7915 1.23212 20.7678L17.142 36.6777C18.1183 37.654 19.7013 37.654 20.6776 36.6777C21.6539 35.7014 21.6539 34.1185 20.6776 33.1421L6.53543 19L20.6776 4.85787C21.6539 3.88156 21.6539 2.29865 20.6776 1.32234C19.7013 0.346026 18.1183 0.346026 17.142 1.32234L1.23212 17.2322ZM100.944 16.5L2.99989 16.5L2.99989 21.5L100.944 21.5L100.944 16.5Z"
+                fill="#121423"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-options">
+      <p>
+        <label>
+          Картинок:
+          <input
+            class="cells-range"
+            type="range"
+            min="3"
+            max="11"
+            value="6"
+          />
+        </label>
+      </p>
+      <p>
+        <button class="previous-button">Пред</button>
+        <button class="next-button">След</button>
+      </p>
+      <p>
+        Orientation:
+        <label>
+          <input type="radio" name="orientation" value="horizontal" checked />
+          horizontal
+        </label>
+        <label>
+          <input type="radio" name="orientation" value="vertical" />
+          vertical
+        </label>
+      </p>
+    </div>
+  </div>
+</section>

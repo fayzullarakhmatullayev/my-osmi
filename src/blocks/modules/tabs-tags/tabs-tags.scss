@@ -1,0 +1,32 @@
+.tabs-tags {
+    overflow: hidden;
+}
+
+.tabs-tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: vw(-8) vw(-16);
+
+    &.mobile {
+        margin: -6px -8px;
+    }
+}
+
+.tabs-tags__item {
+    font-size: vw(25);
+    line-height: 160%;
+    margin: vw(8) vw(16);
+
+    .btn__content {
+        padding: vw(16) vw(24);
+    }
+
+    &.mobile {
+        font-size: 14px;
+        margin: 6px 8px;
+
+        .btn__content {
+            padding: 12px 16px;
+        }
+    }
+}

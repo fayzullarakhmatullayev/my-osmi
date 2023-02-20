@@ -1,0 +1,106 @@
+.mukomol {
+  background: #ffe1aa;
+  transition: background 0.6s ease;
+}
+.mukomol__image {
+  position: absolute;
+  transition: transform 0.6s ease;
+  z-index: 2;
+  img {
+    height: 100%;
+  }
+}
+.mukomol__image--center {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: vw(319);
+  padding-bottom: vw(128);
+  box-sizing: content-box;
+}
+.mukomol__image--left {
+  top: 50%;
+  left: 50%;
+  // transform: translateX(calc(-50% - #{vw(215)}))translateY(-50%);
+  transform: translateX(calc(-50% - 1000px)) translateY(-50%);
+  height: vw(323);
+  padding-bottom: vw(128);
+  box-sizing: content-box;
+}
+.mukomol__image--right {
+  top: 50%;
+  left: 50%;
+  // transform: translateX(calc(-50% + #{vw(215)})) translateY(-50%);
+  transform: translateX(calc(-50% + 1000px)) translateY(-50%);
+  height: vw(323);
+  padding-bottom: vw(128);
+  box-sizing: content-box;
+}
+.mukomol__image--accessuars {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.mukomol:hover {
+  background: #f6f6f8;
+}
+
+.mukomol:hover .mukomol__image--left {
+  transform: translateX(calc(-50% - #{vw(215)})) translateY(-50%);
+}
+.mukomol:hover .mukomol__image--right {
+  transform: translateX(calc(-50% + #{vw(215)})) translateY(-50%);
+}
+.mukomol:hover .mukomol__image--accessuars {
+  opacity: 1;
+}
+
+@media (max-width: 1023px) {
+  .mukomol {
+    background: #f6f6f8;
+  }
+  .mukomol .mukomol__image--left {
+    transform: translateX(calc(-50% - #{vw(215)})) translateY(-50%);
+  }
+  .mukomol .mukomol__image--right {
+    transform: translateX(calc(-50% + #{vw(215)})) translateY(-50%);
+  }
+  .mukomol .mukomol__image--accessuars {
+    opacity: 1;
+  }
+  .mukomol .mukomol__image--accessuars {
+    opacity: 1;
+  }
+  .mukomol .mukomol__image--center {
+    height: 108px;
+  }
+  .mukomol .mukomol__image--left {
+    transform: translateX(calc(-50% - 100px)) translateY(-50%);
+    height: 108px;
+  }
+  .mukomol .mukomol__image--right {
+    transform: translateX(calc(-50% + 100px)) translateY(-50%);
+    height: 108px;
+  }
+  .mukomol .mukomol__image--accessuars {
+    opacity: 1;
+  }
+}
+@media all and (max-width: 400px) {
+  .mukomol .mukomol__image--center {
+    height: 60px;
+    top: 35%;
+  }
+  .mukomol .mukomol__image--left {
+    height: 60px;
+    top: 35%;
+  }
+  .mukomol .mukomol__image--right {
+    height: 60px;
+    top: 35%;
+  }
+}

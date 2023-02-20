@@ -1,0 +1,7 @@
+.homeoutlet {
+    background: #76B3AC url('../img/homeoutlet.png') 50% 50%/cover no-repeat;
+}
+.homeoutlet:hover,
+.homeoutlet.mobile {
+    background: #E5E5E5 url('../img/homeoutlet_hover.png') 50% 50%/cover no-repeat;
+} 

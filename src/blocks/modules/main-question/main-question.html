@@ -1,0 +1,72 @@
+<section id="main-question" class="main-question fileLoaderMain">
+  <div class="main-question-tentacle" v-if="!isSafary">
+    <img v-if="window.width > 1023" src="img/svg/big_tentacle.svg" alt="" />
+    <img
+      v-if="window.width <=1023"
+      src="img/svg/main-question-mobile.svg"
+      alt=""
+    />
+  </div>
+  <div class="main-question-tentacle" v-else>
+    <img
+      v-if="window.width > 1023"
+      src="img/svg/big_tentacle_static.svg"
+      alt=""
+    />
+    <img
+      v-if="window.width <=1023"
+      src="img/svg/main-question-mobile.svg"
+      alt=""
+    />
+  </div>
+  <div class="main-question__content">
+    <h4 class="main-question-title">Вы все еще здесь?</h4>
+    <div class="main-question-subtitle">Тогда вам точно что-то нужно!</div>
+    <form action="#">
+      <div class="main-question-form">
+        <div class="main-question-inputs">
+          <input type="text" placeholder="Название компании" />
+          <input type="text" placeholder="Телефон" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Примечание"></textarea>
+          <!-- <input type="text" placeholder="Ваше сообщение"> -->
+          <label class="upload-form-file main-question-form-item file">
+            <input class="upload-form-file__field" type="file" />
+            <span class="upload-form-file__no-file">+ Прикрепить файл</span>
+            <span class="upload-form-file__file">
+              <div class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 20 26"
+                  fill="none"
+                >
+                  <path
+                    d="M18.1 8.57612C18.4228 8.57612 18.589 8.20323 18.3824 7.97037L18.4727 8.05909C18.8103 8.39089 19 8.84096 19 9.31025V22.7308C19 23.7079 18.1941 24.5 17.2 24.5H2.8C1.80589 24.5 1 23.7079 1 22.7308L1 3.26925C1 2.29204 1.80601 1.49989 2.8002 1.5L11.054 1.50089C11.5312 1.50094 11.9889 1.6873 12.3264 2.01898L12.409 2.10015C12.1717 1.90644 11.8 2.06966 11.8 2.38376M18.1 8.57612H13.6C12.6059 8.57612 11.8 7.784 11.8 6.80687V2.38376M18.1 8.57612C18.4321 8.57612 18.5984 8.18112 18.3636 7.95029L12.4364 2.12436C12.2015 1.89353 11.8 2.05732 11.8 2.38376"
+                    stroke="#FF4978"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="upload-form-file__file-text"></div>
+            </span>
+          </label>
+          <div class="main-question-form-item button">
+            <button
+              type="submit"
+              class="btn btn--pink"
+              :class="{'mobile': window.width <=1023}"
+            >
+              <div class="btn__content">
+                <div class="btn__text">Отправить</div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

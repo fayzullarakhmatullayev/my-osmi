@@ -1,0 +1,392 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  @media (max-width: 1023px) {
+    &.isOpened {
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-blur {
+    background: rgba(18, 20, 35, 0.85);
+    backdrop-filter: blur(16px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  @media (max-width: 1023px) {
+    &-blur {
+      display: none !important;
+    }
+  }
+  @media (max-width: 1023px) {
+    &.isOpened &-blur {
+      background: rgba(18, 20, 35, 0.9);
+      display: block !important;
+    }
+  }
+  &-in {
+    padding: 0 vw(50);
+    @extend %flex-center-between;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 1023px) {
+    &-in {
+      padding: 0 20px;
+      background: #121423 !important;
+    }
+    &.isOpened &-in {
+      background: transparent !important;
+    }
+  }
+  &-logo {
+    width: vw(352);
+    padding: vw(10) 0;
+    transition: all 0.1s ease-out 0s;
+    @extend %block;
+    @extend %zero-font-size;
+    @media (max-width: 1023px) {
+      width: 161px !important;
+      padding: 20px 0;
+    }
+  }
+  &-menu {
+    position: relative;
+    display: none;
+    &_show {
+      display: block;
+    }
+    ul {
+      list-style: none;
+      @extend %zero-font-size;
+    }
+    li {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+
+      .header-phone_modal_in {
+        width: max-content;
+
+        .header-phone_modal_phones {
+          a {
+            padding: 0;
+            color: #ffffff;
+          }
+        }
+      }
+
+      &:hover {
+        .header-phone_modal {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      padding: vw(20);
+      font-weight: 600;
+      font-size: vw(20);
+      line-height: vw(20);
+      @extend %white;
+      @extend %block;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+    li.isActive a {
+      color: $mainColor;
+    }
+  }
+  &-menu-opener {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 21px;
+    cursor: pointer;
+    &_show {
+      display: flex;
+    }
+    div {
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s ease;
+      transform-origin: 100% 50%;
+      &:nth-child(3n + 2) {
+        width: 70%;
+        margin-left: auto;
+      }
+    }
+    &.isOpened {
+      div {
+        &:nth-child(3n + 2) {
+          width: 0;
+        }
+        &:nth-child(3n + 1) {
+          transform: rotate(-27deg);
+        }
+        &:nth-child(3n + 3) {
+          transform: rotate(27deg);
+        }
+      }
+    }
+  }
+  &-menu-wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: vw(20);
+    height: vw(12);
+    background: $bgColor;
+    transform: translateX(-50%);
+    display: none;
+    @extend %zero-font-size;
+  }
+  &-menu-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: vw(2);
+    background: $mainColor;
+    pointer-events: none;
+  }
+  &-lang {
+    @extend %zero-font-size;
+    display: none;
+    align-items: center;
+    align-self: stretch;
+    &_show {
+      display: flex;
+    }
+    li {
+      font-weight: 500;
+      font-size: vw(20);
+      line-height: vw(20);
+      @extend %white;
+      @extend %inline-block;
+      &.active {
+        color: #ff4978;
+      }
+    }
+    a {
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+      text-decoration: none;
+      @extend %transition;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+  &-mobile-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: translateY(-150%);
+    flex: 1 1 auto;
+    z-index: 12;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    @extend %transition;
+    &_show {
+      display: flex;
+    }
+    &.isOpened {
+      position: relative;
+      transform: translateY(0);
+
+      ul {
+        overflow: auto;
+
+        li {
+          ul.header-phone_modal {
+            overflow: hidden;
+            height: 0;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      a {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 600;
+        padding: 10px 20px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+      }
+      li.isActive a {
+        color: $mainColor;
+      }
+    }
+  }
+  &-lang__delim {
+    margin: 0 vw(10);
+  }
+  &-phone_opener {
+    width: vw(30);
+    height: 100%;
+    margin-right: vw(20);
+    cursor: pointer;
+    @media all and (min-width: 481px) {
+      position: relative;
+    }
+    > svg {
+      stroke: #fff;
+      @extend %transition;
+    }
+    &:hover {
+      > svg {
+        stroke: $mainColor;
+      }
+    }
+  }
+  @media (max-width: 1023px) {
+    &-phone_opener {
+      width: 30px;
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > svg {
+        stroke: #fff !important;
+      }
+    }
+  }
+  &-phone_modal {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 300;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    @media all and (max-width: 480px) {
+      left: 0;
+    }
+    &.isOpened {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:after {
+      content: "";
+      width: 0;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &-phone_modal_in {
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(300);
+    padding: vw(40);
+    box-sizing: border-box;
+    background: rgba(18, 20, 35, 0.75);
+    backdrop-filter: blur(16px);
+    position: relative;
+    @media all and (max-width: 480px) {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+  }
+  @media (max-width: 1023px) {
+    &-phone_modal_in {
+      padding: 40px;
+      width: 300px;
+    }
+  }
+  &-phone_modal_closer {
+    width: vw(20);
+    height: vw(20);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: vw(10);
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  @media (max-width: 1023px) {
+    &-phone_modal_closer {
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+    }
+  }
+  &-phone_modal_phones {
+    a {
+      color: #fff;
+      font-size: vw(20);
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .delim {
+      height: 1px;
+      // background: #fff;
+      margin: vw(20) 0;
+    }
+  }
+  @media (max-width: 1023px) {
+    &-phone_modal_phones {
+      a {
+        font-size: 20px;
+      }
+      .delim {
+        margin: 20px 0;
+      }
+    }
+  }
+  &__phones_mobile {
+    display: none;
+    align-items: center;
+    align-self: stretch;
+    &.header__phones_mobile_show {
+      display: flex;
+    }
+  }
+}
+.call-to-action-button a.button--main {
+  padding-left: vw(10);
+  padding-right: vw(10);
+}
+.jb_lnks {
+  flex-wrap: wrap;
+}
+
+.header-phone_opener {
+  width: 30px;
+  height: 75px;
+  svg {
+    stroke: #fff;
+    display: block;
+    @extend %transition;
+
+    &:hover {
+      stroke: $mainColor;
+    }
+  }
+}

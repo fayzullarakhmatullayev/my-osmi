@@ -1,0 +1,12 @@
+.mmcite {
+  background: url("../img/mmcite.png") 50% 50% / cover no-repeat;
+}
+.mmcite:hover {
+  background: url("../img/mmcite_hover.png") 50% 50% / cover no-repeat;
+}
+
+@media (max-width: 1023px) {
+  .mmcite.mobile {
+    background: url("../img/mmcite_hover.png") 50% 50% / cover no-repeat;
+  }
+}

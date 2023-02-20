@@ -1,0 +1,37 @@
+%flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%flex-start-between {
+  display: flex;
+  align-items: flex-start;
+  justify-content: between;
+}
+%flex-start-end {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+%block {
+  display: block;
+}
+%inline-block {
+  display: inline-block;
+}
+
+%white {
+  color: #fff;
+}
+%transition {
+  transition: all 0.3s ease;
+}
+
+%zero-font-size {
+  font-size: 0;
+}
