@@ -23,6 +23,7 @@ module.exports = {
     vacancies: "./src/js/vacancies.js",
     career: "./src/js/career.js",
     footer: "./src/js/footer.js",
+    blog: "./src/js/blog.js",
   },
 
   output: {

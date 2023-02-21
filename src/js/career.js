@@ -110,6 +110,8 @@ function animateTitles() {
 }
 
 
+
+
 class careerBlocks {
   constructor() {}
   animateItems() {

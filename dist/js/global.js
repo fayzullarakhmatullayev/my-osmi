@@ -424,3 +424,4 @@ function resizeScreen(resizeData) {
 /***/ })
 
 /******/ });
+//# sourceMappingURL=global.js.map
