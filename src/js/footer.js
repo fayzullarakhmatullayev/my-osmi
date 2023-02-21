@@ -84,6 +84,12 @@ class Footer {
         isLess: true
       },
       {
+        element: '.footer-info--name',
+        className: 'mobile',
+        size: 1023,
+        isLess: true
+      },
+      {
         element: '.footer-menu-first',
         className: 'mobile',
         size: 1023,
