@@ -152,10 +152,10 @@ const preloader = class Prloader {
   init() {
     resizeScreen([
       {
-        element: "#preloader",
+        element: ".preloader",
         className: "mobile",
         size: 1023,
-        isLess: false, //<=
+        isLess: true, //<=
       },
     ]);
     setTimeout(() => {

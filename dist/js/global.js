@@ -322,10 +322,10 @@ var preloader = /*#__PURE__*/function () {
     value: function init() {
       var _this4 = this;
       Object(_resize__WEBPACK_IMPORTED_MODULE_2__["default"])([{
-        element: "#preloader",
+        element: ".preloader",
         className: "mobile",
         size: 1023,
-        isLess: false //<=
+        isLess: true //<=
       }]);
 
       setTimeout(function () {
@@ -424,4 +424,3 @@ function resizeScreen(resizeData) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=global.js.map

@@ -117,6 +117,12 @@ const industry = class IndustrySpecialization {
         isLess: true // <=
       },
       {
+        element: '.news-and-trends',
+        className: 'mobile',
+        size: 1023,
+        isLess: true // <=
+      },
+      {
         element: '.industry-specialization__title',
         className: 'mobile',
         size: 1023,
@@ -508,11 +514,17 @@ const mainAbout = class MainAbout {
       {element: '.main-about__description', className: 'isMobile', size: 1023, isLess: true },
       {element: '.main-about__bottom', className: 'isMobile', size: 1023, isLess: true },
       {element: '.main-about__statistics-list', className: 'isMobile', size: 1023, isLess: true },
-      {element: '.main-about__statistics-block', className: 'isMobile', size: 1023, isLess: true },
       {element: '.main-about-statistics-item', className: 'isMobile', size: 1023, isLess: true },
     ])
     
     const items = document.querySelectorAll('.main-about-statistics-item');
+    const blocks = document.querySelectorAll('.main-about__statistics-block');
+    blocks.forEach((block, idx) => {
+      block.id = `block_about_${idx}`
+      resizeScreen([
+        {element: `#block_about_${idx}`, className: 'isMobile', size: 1023, isLess: true },
+      ])
+    })
     items.forEach((item, idx) => {
       const el = item.id  = `main_about_item_${idx}`
       resizeScreen([
@@ -1139,6 +1151,56 @@ const casesUpdated = class CasesUpdated {
     });
   }
   init() {
+    const cases_items = document.querySelectorAll('.cases__item');
+    const cases_tags = document.querySelectorAll('.cases-item-tags__item');
+    cases_items.forEach((cases, idx) => {
+      cases.id = `cases_item_${idx}`
+      resizeScreen([
+        {
+          element: `#cases_item_${idx}`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        },
+        {
+          element: `#cases_item_${idx} .cases__tags`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        },
+        {
+          element: `#cases_item_${idx} .cases-item-tags__content`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        },
+    ])
+      
+    })
+    cases_tags.forEach((cases, idx) => {
+      cases.id = `cases_tags_${idx}`
+      resizeScreen([
+        {
+          element: `#cases_tags_${idx}`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        },
+        {
+          element: `#cases_item_${idx} .cases__tags`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        },
+        {
+          element: `#cases_item_${idx} .cases-item-tags__content`,
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        },
+    ])
+      
+    })
     if (window.innerWidth <= 1024) return;
     this.bioline();
     this.medex();
@@ -1167,7 +1229,7 @@ class UploadFormFile {
       const uploadFormFileFileText = uploadFormFileFile.querySelector(
         ".upload-form-file__file-text"
       );
-
+       
       uploadFormFileFile.style.display = "none";
 
       uploadFormFileField.addEventListener("change", (event) => {
@@ -1180,6 +1242,9 @@ class UploadFormFile {
           uploadFormFileNoFile.style.display = "inline-flex";
         }
       });
+      const textarea = document.querySelector('.main-question-inputs textarea');
+       if(!textarea) return
+       textarea.value = ''
     });
   }
 }

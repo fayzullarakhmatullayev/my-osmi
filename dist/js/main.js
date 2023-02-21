@@ -295,6 +295,11 @@ var industry = /*#__PURE__*/function () {
         size: 1023,
         isLess: true // <=
       }, {
+        element: '.news-and-trends',
+        className: 'mobile',
+        size: 1023,
+        isLess: true // <=
+      }, {
         element: '.industry-specialization__title',
         className: 'mobile',
         size: 1023,
@@ -707,17 +712,22 @@ var mainAbout = /*#__PURE__*/function () {
         size: 1023,
         isLess: true
       }, {
-        element: '.main-about__statistics-block',
-        className: 'isMobile',
-        size: 1023,
-        isLess: true
-      }, {
         element: '.main-about-statistics-item',
         className: 'isMobile',
         size: 1023,
         isLess: true
       }]);
       var items = document.querySelectorAll('.main-about-statistics-item');
+      var blocks = document.querySelectorAll('.main-about__statistics-block');
+      blocks.forEach(function (block, idx) {
+        block.id = "block_about_".concat(idx);
+        Object(_resize__WEBPACK_IMPORTED_MODULE_2__["default"])([{
+          element: "#block_about_".concat(idx),
+          className: 'isMobile',
+          size: 1023,
+          isLess: true
+        }]);
+      });
       items.forEach(function (item, idx) {
         var el = item.id = "main_about_item_".concat(idx);
         Object(_resize__WEBPACK_IMPORTED_MODULE_2__["default"])([{
@@ -1313,6 +1323,46 @@ var casesUpdated = /*#__PURE__*/function () {
   }, {
     key: "init",
     value: function init() {
+      var cases_items = document.querySelectorAll('.cases__item');
+      var cases_tags = document.querySelectorAll('.cases-item-tags__item');
+      cases_items.forEach(function (cases, idx) {
+        cases.id = "cases_item_".concat(idx);
+        Object(_resize__WEBPACK_IMPORTED_MODULE_2__["default"])([{
+          element: "#cases_item_".concat(idx),
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        }, {
+          element: "#cases_item_".concat(idx, " .cases__tags"),
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        }, {
+          element: "#cases_item_".concat(idx, " .cases-item-tags__content"),
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        }]);
+      });
+      cases_tags.forEach(function (cases, idx) {
+        cases.id = "cases_tags_".concat(idx);
+        Object(_resize__WEBPACK_IMPORTED_MODULE_2__["default"])([{
+          element: "#cases_tags_".concat(idx),
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        }, {
+          element: "#cases_item_".concat(idx, " .cases__tags"),
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        }, {
+          element: "#cases_item_".concat(idx, " .cases-item-tags__content"),
+          className: 'mobile',
+          size: 1023,
+          isLess: true
+        }]);
+      });
       if (window.innerWidth <= 1024) return;
       this.bioline();
       this.medex();
@@ -1347,6 +1397,9 @@ var UploadFormFile = /*#__PURE__*/function () {
             uploadFormFileNoFile.style.display = "inline-flex";
           }
         });
+        var textarea = document.querySelector('.main-question-inputs textarea');
+        if (!textarea) return;
+        textarea.value = '';
       });
     }
   }]);
@@ -1419,4 +1472,3 @@ function resizeScreen(resizeData) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map
