@@ -221,12 +221,7 @@ var careerFirst = /*#__PURE__*/function () {
         size: 1023,
         isLess: true
       }, {
-        element: ".footer",
-        className: "mobile",
-        size: 1023,
-        isLess: true
-      }, {
-        element: ".cookie-form",
+        element: ".cases__wrapper",
         className: "mobile",
         size: 1023,
         isLess: true
@@ -235,6 +230,16 @@ var careerFirst = /*#__PURE__*/function () {
   }]);
   return CareerFirst;
 }();
+var cases = document.querySelectorAll('.cases__item');
+cases.forEach(function (ca, idx) {
+  ca.id = "case_item_".concat(idx);
+  Object(_resize__WEBPACK_IMPORTED_MODULE_1__["default"])([{
+    element: "#case_item_".concat(idx),
+    className: "mobile",
+    size: 1023,
+    isLess: true
+  }]);
+});
 
 // Main Cases
 var mainCases = /*#__PURE__*/function () {

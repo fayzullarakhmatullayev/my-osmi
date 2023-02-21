@@ -378,12 +378,30 @@ var careerBlog = /*#__PURE__*/function () {
   function careerBlog(sliderClass) {
     _classCallCheck(this, careerBlog);
     this.sliderClass = sliderClass;
+    this.btns = document.querySelectorAll(".news-and-trends-button");
   }
   _createClass(careerBlog, [{
+    key: "onClickBtn",
+    value: function onClickBtn() {
+      var self = this;
+      this.btns.forEach(function (item) {
+        item.addEventListener("click", function (event) {
+          var _this$dataset;
+          self.btns.forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+          this.classList.add("active");
+          var news = ((_this$dataset = this.dataset) === null || _this$dataset === void 0 ? void 0 : _this$dataset.news) || "all";
+          self.onFilter(news);
+        });
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       if (!document.querySelector('.career-blog-items')) return;
       if (window.innerWidth > 1023) {
+        this.onClickBtn();
         new _glidejs_glide__WEBPACK_IMPORTED_MODULE_3__["default"]('.career-blog-items', {
           startAt: 0,
           perView: 3,

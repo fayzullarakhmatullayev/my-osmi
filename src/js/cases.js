@@ -37,13 +37,7 @@ const careerFirst = class CareerFirst {
         isLess: true,
       },
       {
-        element: ".footer",
-        className: "mobile",
-        size: 1023,
-        isLess: true,
-      },
-      {
-        element: ".cookie-form",
+        element: ".cases__wrapper",
         className: "mobile",
         size: 1023,
         isLess: true,
@@ -51,6 +45,19 @@ const careerFirst = class CareerFirst {
     ]);
   }
 };
+
+const cases = document.querySelectorAll('.cases__item');
+cases.forEach((ca, idx) => {
+  ca.id = `case_item_${idx}`
+  resizeScreen([
+    {
+      element: `#case_item_${idx}`,
+      className: "mobile",
+      size: 1023,
+      isLess: true,
+    },
+  ])
+})
 
 // Main Cases
 const mainCases = class MainCases {

@@ -180,10 +180,25 @@ if(textarea) {
 class careerBlog {
     constructor(sliderClass) {
         this.sliderClass = sliderClass;
+        this.btns = document.querySelectorAll(".news-and-trends-button");
+    }
+    onClickBtn() {
+      const self = this;
+      this.btns.forEach((item) => {
+        item.addEventListener("click", function (event) {
+          self.btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          this.classList.add("active");
+          const news = this.dataset?.news || "all";
+          self.onFilter(news);
+        });
+      });
     }
     init() {
         if (!document.querySelector('.career-blog-items')) return;
         if (window.innerWidth > 1023) {
+          this.onClickBtn();
             new Glide('.career-blog-items', {
                 startAt: 0,
                 perView: 3,
