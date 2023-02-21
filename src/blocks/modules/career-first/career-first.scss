@@ -46,11 +46,11 @@
   &-info {
     display: flex;
     align-items: flex-start;
-    &_mobile {
+    &.mobile {
       display: none;
     }
     @media (max-width: 1023px) {
-      &_mobile {
+      &.mobile {
         display: flex;
         flex-direction: column;
         .career-first-tentacle {

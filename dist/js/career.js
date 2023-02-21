@@ -208,6 +208,8 @@ function checkSafari() {
   }]);
   var isSafary = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   var mainTentacles = document.querySelectorAll(".career-first-tentacle");
+  var infos = document.querySelectorAll('.career-first-info');
+  infos[0].classList.add = 'mobile';
   mainTentacles.forEach(function (ten) {
     var images = ten.querySelectorAll("img");
     if (isSafary) {
@@ -303,6 +305,10 @@ function animateTitles() {
     window.dispatchEvent(new Event("resize"));
   }, 500);
 }
+var hhBlogs = document.querySelectorAll('.hh_block');
+var blogBtn = document.querySelector('.career-blog-button');
+blogBtn && blogBtn.classList.add('mobile');
+hhBlogs[0].classList.add('hh_mobile');
 var careerBlocks = /*#__PURE__*/function () {
   function careerBlocks() {
     _classCallCheck(this, careerBlocks);
@@ -332,6 +338,42 @@ var careerBlocks = /*#__PURE__*/function () {
   }]);
   return careerBlocks;
 }();
+var buttonMouseEnter = function buttonMouseEnter(event) {
+  var x = event.offsetX;
+  var y = event.offsetY;
+  var circle = document.createElement("div");
+  circle.classList.add("button-circle");
+  event.target.appendChild(circle);
+  event.target.children[1].style.left = x + "px";
+  event.target.children[1].style.top = y + "px";
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(event.target.children[1], 0.5, {
+    width: 800,
+    height: 800,
+    x: -400,
+    y: -400
+  });
+};
+var buttonMouseLeave = function buttonMouseLeave(event) {
+  var x = event.offsetX;
+  var y = event.offsetY;
+  event.target.children[1].style.left = x + "px";
+  event.target.children[1].style.top = y + "px";
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(event.target.children[1], 0.3, {
+    width: 0,
+    height: 0,
+    x: 0,
+    y: 0,
+    onComplete: function onComplete() {
+      event.target.removeChild(event.target.children[1]);
+    }
+  });
+};
+document.querySelector('.more_cases').addEventListener('mouseenter', buttonMouseEnter);
+document.querySelector('.more_cases').addEventListener('mouseleave', buttonMouseLeave);
+var textarea = document.querySelector('.main-question-inputs textarea');
+if (textarea) {
+  textarea.value = '';
+}
 var careerBlog = /*#__PURE__*/function () {
   function careerBlog(sliderClass) {
     _classCallCheck(this, careerBlog);

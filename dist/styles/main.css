@@ -9257,7 +9257,7 @@ html.overflowed body {
   align-items: flex-start;
 }
 
-.career-first-info_mobile {
+.career-first-info.mobile {
   display: none;
 }
 
@@ -15088,12 +15088,12 @@ input[type=checkbox]:checked + .main-question-form-checkbox:after {
     display: none;
   }
 
-  .career-first-info_mobile {
+  .career-first-info.mobile {
     display: flex;
     flex-direction: column;
   }
 
-  .career-first-info_mobile .career-first-tentacle img {
+  .career-first-info.mobile .career-first-tentacle img {
     width: 312px;
     margin-left: auto;
     margin-right: 0;

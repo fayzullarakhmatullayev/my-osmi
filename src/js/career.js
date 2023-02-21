@@ -14,6 +14,8 @@ function checkSafari() {
   ])
   const isSafary = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const mainTentacles = document.querySelectorAll(".career-first-tentacle");
+  const infos = document.querySelectorAll('.career-first-info');
+  infos[0].classList.add = 'mobile'
   mainTentacles.forEach((ten) => {
     const images = ten.querySelectorAll("img");
     if (isSafary) {
@@ -108,10 +110,10 @@ function animateTitles() {
     window.dispatchEvent(new Event("resize"));
   }, 500);
 }
-
-
-
-
+const hhBlogs = document.querySelectorAll('.hh_block');
+const blogBtn = document.querySelector('.career-blog-button');
+blogBtn && blogBtn.classList.add('mobile')
+hhBlogs[0].classList.add('hh_mobile')
 class careerBlocks {
   constructor() {}
   animateItems() {
@@ -134,6 +136,47 @@ class careerBlocks {
   }
 }
 
+const buttonMouseEnter = (event) => {
+  let x = event.offsetX;
+  let y = event.offsetY;
+  let circle = document.createElement("div");
+  circle.classList.add("button-circle");
+  event.target.appendChild(circle);
+  event.target.children[1].style.left = x + "px";
+  event.target.children[1].style.top = y + "px";
+  gsap.to(event.target.children[1], 0.5, {
+    width: 800,
+    height: 800,
+    x: -400,
+    y: -400,
+  });
+};
+
+const buttonMouseLeave = (event) => {
+  let x = event.offsetX;
+  let y = event.offsetY;
+
+  event.target.children[1].style.left = x + "px";
+  event.target.children[1].style.top = y + "px";
+
+  gsap.to(event.target.children[1], 0.3, {
+    width: 0,
+    height: 0,
+    x: 0,
+    y: 0,
+    onComplete: () => {
+      event.target.removeChild(event.target.children[1]);
+    },
+  });
+};
+
+document.querySelector('.more_cases').addEventListener('mouseenter', buttonMouseEnter)
+document.querySelector('.more_cases').addEventListener('mouseleave', buttonMouseLeave)
+
+const textarea = document.querySelector('.main-question-inputs textarea');
+if(textarea) {
+  textarea.value = ''
+}
 class careerBlog {
     constructor(sliderClass) {
         this.sliderClass = sliderClass;
